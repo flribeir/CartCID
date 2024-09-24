@@ -2,6 +2,7 @@
 <html>
 <body>
   <header>
+  <img src="https://www.prefeituradearuja.sp.gov.br//images/brasaopma.png" alt="Logo da Prefeitura Municipal de Arujá">
   </header>
   <main>
     <h1>Projeto de geração de carteirinhas para portadores de "doenças invisiveis" </h1>
