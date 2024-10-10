@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato - Serviços de Limpeza Doméstica</title>
+    <title>Carteira Digital TEA/TDAH/TOD </title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -89,14 +89,14 @@
             </div>
             <button type="submit" class="btn">Enviar</button>
         </form>
-    </section>    
+    </section>
 
     <script>
         document.getElementById('contactForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Impede o envio padrão do formulário
-            
+
             // Pode adicionar aqui lógica para validar os dados do formulário antes de enviar
-            
+
             // Obtém os dados do formulário
             var formData = {
                 nome: document.getElementById('nome').value,
@@ -106,9 +106,9 @@
                 estado: document.getElementById('estado').value,
                 cidade: document.getElementById('cidade').value,
                 cep: document.getElementById('cep').value,
-                datas: document.getElementById('datas').value            
+                datas: document.getElementById('datas').value
             };
-            
+
             // Faz a requisição para o servidor
             fetch('http://localhost:3000/submit-form', {
                 method: 'POST',
