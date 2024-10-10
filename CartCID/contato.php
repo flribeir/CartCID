@@ -250,6 +250,7 @@
 
             <!-- Botão de Enviar -->
             <button type="submit" class="btn btn-primary">Cadastrar</button>
+            <button type="button" class="btn btn-secondary" onclick="window.location.href='index.html'">Cancelar</button>
         </form>
     </div>
 </body>
