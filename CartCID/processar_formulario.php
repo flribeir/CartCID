@@ -6,14 +6,12 @@ error_reporting(E_ALL);
 try {
     // Configuração da conexão ao banco de dados
     $servername = "127.0.0.1";
-    $username   = "root";     // Nome de usuário do banco de dados
-    $password   = "univesp";  // Senha do banco de dados
-    $dbname     = "CartCID";  // Nome do banco de dados
+    $username   = "root";
+    $password   = "univesp";
+    $dbname     = "CartCID";
 
     // Conectando ao banco de dados usando PDO
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-
-    // Configura o PDO para lançar exceções em caso de erro
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Captura os dados enviados via POST do formulário
@@ -43,6 +41,26 @@ try {
     $uf                   = $_POST['UF'];
     $CID                  = $_POST['CID'];
 
+    // Diretórios para salvar arquivos
+    $fotoDir        = "files/fotos/";
+    $comprovanteDir = "files/comprovante_residencia/";
+    $laudoDir    = "files/laudo/";
+
+    // Verifica e cria diretórios, se não existirem
+    if (!is_dir($fotoDir)) mkdir($fotoDir, 0777, true);
+    if (!is_dir($comprovanteDir)) mkdir($comprovanteDir, 0777, true);
+    if (!is_dir($laudoDir)) mkdir($laudoDir, 0777, true);
+
+    // Processamento dos arquivos enviados
+    $fotoPath        = $fotoDir . basename($_FILES['Foto']['name']);
+    $comprovantePath = $comprovanteDir . basename($_FILES['ComprovanteEndereco']['name']);
+    $laudoPath       = $laudoDir . basename($_FILES['LaudoMedico']['name']);
+
+    // Movendo arquivos para os diretórios específicos
+    move_uploaded_file($_FILES['Foto']['tmp_name'], $fotoPath);
+    move_uploaded_file($_FILES['ComprovanteEndereco']['tmp_name'], $comprovantePath);
+    move_uploaded_file($_FILES['LaudoMedico']['tmp_name'], $laudoPath);
+
     // SQL para inserir dados na tabela Carteirinha
     $sql = "INSERT INTO Carteirinha (Nome, CPF, RG, RG_Orgao_Expeditor, RG_Data_Expeditor, Sexo, Tipo_Sanguineo, Dt_Nascimento, Celular, Email, Naturalidade, Nacionalidade, Nome_Pai, Nome_Mae, Nome_Responsavel, Telefone_Responsavel, Email_Responsavel, CEP, Endereco, Numero, Complemento, Bairro, Cidade, UF, CID)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -50,7 +68,7 @@ try {
     // Prepara a declaração SQL para execução
     $stmt = $conn->prepare($sql);
 
-    // Executa a declaração SQL com os dados capturados
+    // Executa a declaração SQL com os dados capturados e os caminhos dos arquivos
     $stmt->execute([
         $nome,
         $cpf,
@@ -79,7 +97,9 @@ try {
         $CID
     ]);
 
-    echo "Cadastro realizado com sucesso!";
+    // Redireciona para a página inicial após o sucesso
+    header("Location: index.html");
+    exit();
 } catch (PDOException $e) {
     echo "Erro: " . $e->getMessage();
 }

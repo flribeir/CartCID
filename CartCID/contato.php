@@ -50,7 +50,7 @@
         }
         ?>
 
-        <form action="processar_formulario.php" method="POST">
+        <form action="processar_formulario.php" method="POST" enctype="multipart/form-data">
             <div class="row">
                 <!-- Nome -->
                 <div class="col-md-6 mb-3">
@@ -246,12 +246,33 @@
                         ?>
                     </select>
                 </div>
-            </div>
 
-            <!-- Botão de Enviar -->
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
-            <button type="button" class="btn btn-secondary" onclick="window.location.href='index.html'">Cancelar</button>
-        </form>
+                <!-- Campos de Upload -->
+                <div class="row">
+                    <!-- Foto -->
+                    <div class="col-md-4 mb-3">
+                        <label for="Foto" class="form-label">Foto</label>
+                        <input type="file" class="form-control" id="Foto" name="Foto" accept="image/*" required>
+                    </div>
+                    <!-- Comprovante de Endereço -->
+                    <div class="col-md-4 mb-3">
+                        <label for="ComprovanteEndereco" class="form-label">Comprovante de Endereço</label>
+                        <input type="file" class="form-control" id="ComprovanteEndereco" name="ComprovanteEndereco" accept=".pdf,.jpg,.jpeg,.png" required>
+                    </div>
+                    <!-- Laudo Médico -->
+                    <div class="col-md-4 mb-3">
+                        <label for="LaudoMedico" class="form-label">Laudo Médico</label>
+                        <input type="file" class="form-control" id="LaudoMedico" name="LaudoMedico" accept=".pdf,.jpg,.jpeg,.png" required>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+
+    <!-- Botão de Enviar -->
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+    <button type="button" class="btn btn-secondary" onclick="window.location.href='index.html'">Cancelar</button>
+    </form>
     </div>
 </body>
 
