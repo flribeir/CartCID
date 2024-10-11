@@ -41,26 +41,6 @@ try {
     $uf                   = $_POST['UF'];
     $CID                  = $_POST['CID'];
 
-    // Diretórios para salvar arquivos
-    $fotoDir        = "files/fotos/";
-    $comprovanteDir = "files/comprovante_residencia/";
-    $laudoDir    = "files/laudo/";
-
-    // Verifica e cria diretórios, se não existirem
-    if (!is_dir($fotoDir)) mkdir($fotoDir, 0777, true);
-    if (!is_dir($comprovanteDir)) mkdir($comprovanteDir, 0777, true);
-    if (!is_dir($laudoDir)) mkdir($laudoDir, 0777, true);
-
-    // Processamento dos arquivos enviados
-    $fotoPath        = $fotoDir . basename($_FILES['Foto']['name']);
-    $comprovantePath = $comprovanteDir . basename($_FILES['ComprovanteEndereco']['name']);
-    $laudoPath       = $laudoDir . basename($_FILES['LaudoMedico']['name']);
-
-    // Movendo arquivos para os diretórios específicos
-    move_uploaded_file($_FILES['Foto']['tmp_name'], $fotoPath);
-    move_uploaded_file($_FILES['ComprovanteEndereco']['tmp_name'], $comprovantePath);
-    move_uploaded_file($_FILES['LaudoMedico']['tmp_name'], $laudoPath);
-
     // SQL para inserir dados na tabela Carteirinha
     $sql = "INSERT INTO Carteirinha (Nome, CPF, RG, RG_Orgao_Expeditor, RG_Data_Expeditor, Sexo, Tipo_Sanguineo, Dt_Nascimento, Celular, Email, Naturalidade, Nacionalidade, Nome_Pai, Nome_Mae, Nome_Responsavel, Telefone_Responsavel, Email_Responsavel, CEP, Endereco, Numero, Complemento, Bairro, Cidade, UF, CID)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -96,6 +76,29 @@ try {
         $uf,
         $CID
     ]);
+
+    // Obter o ID do último registro inserido
+    $lastInsertId = $conn->lastInsertId();
+
+    // Diretórios para salvar arquivos
+    $fotoDir        = "files/fotos/";
+    $comprovanteDir = "files/comprovante_residencia/";
+    $laudoDir    = "files/laudo/";
+
+    // Verifica e cria diretórios, se não existirem
+    if (!is_dir($fotoDir)) mkdir($fotoDir, 0777, true);
+    if (!is_dir($comprovanteDir)) mkdir($comprovanteDir, 0777, true);
+    if (!is_dir($laudoDir)) mkdir($laudoDir, 0777, true);
+
+    // Renomeia e move os arquivos usando $lastInsertId
+    $fotoPath        = $fotoDir        . $lastInsertId . "_foto."        . pathinfo($_FILES['Foto']['name'], PATHINFO_EXTENSION);
+    $comprovantePath = $comprovanteDir . $lastInsertId . "_comprovante." . pathinfo($_FILES['ComprovanteEndereco']['name'], PATHINFO_EXTENSION);
+    $laudoPath       = $laudoDir       . $lastInsertId . "_laudo."       . pathinfo($_FILES['LaudoMedico']['name'], PATHINFO_EXTENSION);
+
+    // Movendo arquivos para os diretórios específicos
+    move_uploaded_file($_FILES['Foto']['tmp_name'], $fotoPath);
+    move_uploaded_file($_FILES['ComprovanteEndereco']['tmp_name'], $comprovantePath);
+    move_uploaded_file($_FILES['LaudoMedico']['tmp_name'], $laudoPath);
 
     // Redireciona para a página inicial após o sucesso
     header("Location: index.html");
