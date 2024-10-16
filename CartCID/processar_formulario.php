@@ -48,7 +48,7 @@ try {
     // Prepara a declaração SQL para execução
     $stmt = $conn->prepare($sql);
 
-    // Executa a declaração SQL com os dados capturados e os caminhos dos arquivos
+    // Executa a declaração SQL com os dados capturados
     $stmt->execute([
         $nome,
         $cpf,
@@ -83,7 +83,7 @@ try {
     // Diretórios para salvar arquivos
     $fotoDir        = "files/fotos/";
     $comprovanteDir = "files/comprovante_residencia/";
-    $laudoDir    = "files/laudo/";
+    $laudoDir       = "files/laudo/";
 
     // Verifica e cria diretórios, se não existirem
     if (!is_dir($fotoDir)) mkdir($fotoDir, 0777, true);
@@ -99,13 +99,55 @@ try {
     move_uploaded_file($_FILES['Foto']['tmp_name'], $fotoPath);
     move_uploaded_file($_FILES['ComprovanteEndereco']['tmp_name'], $comprovantePath);
     move_uploaded_file($_FILES['LaudoMedico']['tmp_name'], $laudoPath);
-
-    // Redireciona para a página inicial após o sucesso
-    header("Location: index.html");
-    exit();
 } catch (PDOException $e) {
     echo "Erro: " . $e->getMessage();
+    exit();
 }
 
-// Fecha a conexão com o banco de dados
-$conn = null;
+// Exibe o modal com a carteirinha em PDF
+?>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processamento de Formulário</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Modal para exibir o PDF -->
+    <div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pdfModalLabel">Carteirinha PDF</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Iframe para carregar carteirinha_pdf.php -->
+                    <iframe src="carteirinha_pdf.php?id=<?php echo $lastInsertId; ?>" width="100%" height="600px" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts do Bootstrap e JavaScript para o modal -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        // Abre o modal automaticamente
+        var pdfModal = new bootstrap.Modal(document.getElementById('pdfModal'), {});
+        pdfModal.show();
+
+        // Redireciona para index.html ao fechar o modal
+        document.getElementById('pdfModal').addEventListener('hidden.bs.modal', function() {
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+
+</html>
