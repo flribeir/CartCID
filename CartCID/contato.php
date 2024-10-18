@@ -32,7 +32,7 @@
         $servername = "127.0.0.1";
         $username = "root";
         $password = "univesp";
-        $dbname = "CartCID";
+        $dbname   = "CartCID";
 
         try {
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -55,17 +55,17 @@
                 <!-- Nome -->
                 <div class="col-md-6 mb-3">
                     <label for="Nome" class="form-label">Nome</label>
-                    <input type="text" class="form-control" id="Nome" name="Nome" maxlength="150">
+                    <input type="text" class="form-control" id="Nome" name="Nome" maxlength="150" required>
                 </div>
                 <!-- CPF -->
                 <div class="col-md-3 mb-3">
                     <label for="CPF" class="form-label">CPF</label>
-                    <input type="text" class="form-control" id="CPF" name="CPF">
+                    <input type="text" class="form-control" id="CPF" name="CPF" required>
                 </div>
                 <!-- RG -->
                 <div class="col-md-3 mb-3">
                     <label for="RG" class="form-label">RG</label>
-                    <input type="text" class="form-control" id="RG" name="RG" maxlength="25">
+                    <input type="text" class="form-control" id="RG" name="RG" maxlength="25" required>
                 </div>
             </div>
 
@@ -83,7 +83,7 @@
                 <!-- Sexo -->
                 <div class="col-md-3 mb-3">
                     <label for="Sexo" class="form-label">Sexo</label>
-                    <select class="form-select" id="Sexo" name="Sexo">
+                    <select class="form-select" id="Sexo" name="Sexo" required>
                         <option value="M">Masculino</option>
                         <option value="F">Feminino</option>
                     </select>
@@ -91,7 +91,7 @@
                 <!-- Tipo Sanguíneo -->
                 <div class="col-md-3 mb-3">
                     <label for="Tipo_Sanguineo" class="form-label">Tipo Sanguíneo</label>
-                    <select class="form-select" id="Tipo_Sanguineo" name="Tipo_Sanguineo">
+                    <select class="form-select" id="Tipo_Sanguineo" name="Tipo_Sanguineo" required>
                         <option value="A+">A+</option>
                         <option value="A-">A-</option>
                         <option value="B+">B+</option>
@@ -108,17 +108,17 @@
                 <!-- Data de Nascimento -->
                 <div class="col-md-3 mb-3">
                     <label for="Dt_Nascimento" class="form-label">Data de Nascimento</label>
-                    <input type="date" class="form-control" id="Dt_Nascimento" name="Dt_Nascimento">
+                    <input type="date" class="form-control" id="Dt_Nascimento" name="Dt_Nascimento" required>
                 </div>
                 <!-- Celular -->
                 <div class="col-md-3 mb-3">
                     <label for="Celular" class="form-label">Celular</label>
-                    <input type="text" class="form-control" id="Celular" name="Celular">
+                    <input type="text" class="form-control" id="Celular" name="Celular" required>
                 </div>
                 <!-- Email -->
                 <div class="col-md-6 mb-3">
                     <label for="Email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="Email" name="Email" maxlength="100">
+                    <input type="email" class="form-control" id="Email" name="Email" maxlength="100" required>
                 </div>
             </div>
 
@@ -126,12 +126,12 @@
                 <!-- Naturalidade -->
                 <div class="col-md-3 mb-3">
                     <label for="Naturalidade" class="form-label">Naturalidade</label>
-                    <input type="text" class="form-control" id="Naturalidade" name="Naturalidade" maxlength="25">
+                    <input type="text" class="form-control" id="Naturalidade" name="Naturalidade" maxlength="25" required>
                 </div>
                 <!-- Nacionalidade -->
                 <div class="col-md-3 mb-3">
                     <label for="Nacionalidade" class="form-label">Nacionalidade</label>
-                    <input type="text" class="form-control" id="Nacionalidade" name="Nacionalidade" maxlength="25">
+                    <input type="text" class="form-control" id="Nacionalidade" name="Nacionalidade" maxlength="25" required>
                 </div>
                 <!-- Nome Pai -->
                 <div class="col-md-6 mb-3">
@@ -144,7 +144,7 @@
                 <!-- Nome Mãe -->
                 <div class="col-md-6 mb-3">
                     <label for="Nome_Mae" class="form-label">Nome da Mãe</label>
-                    <input type="text" class="form-control" id="Nome_Mae" name="Nome_Mae" maxlength="150">
+                    <input type="text" class="form-control" id="Nome_Mae" name="Nome_Mae" maxlength="150" required>
                 </div>
                 <!-- Nome Responsável -->
                 <div class="col-md-6 mb-3">
@@ -170,17 +170,17 @@
                 <!-- CEP -->
                 <div class="col-md-3 mb-3">
                     <label for="CEP" class="form-label">CEP</label>
-                    <input type="text" class="form-control" id="CEP" name="CEP" maxlength="9">
+                    <input type="text" class="form-control" id="CEP" name="CEP" maxlength="9" required>
                 </div>
                 <!-- Endereço -->
                 <div class="col-md-6 mb-3">
                     <label for="Endereco" class="form-label">Endereço</label>
-                    <input type="text" class="form-control" id="Endereco" name="Endereco" maxlength="255">
+                    <input type="text" class="form-control" id="Endereco" name="Endereco" maxlength="255" required>
                 </div>
                 <!-- Número -->
                 <div class="col-md-3 mb-3">
                     <label for="Numero" class="form-label">Número</label>
-                    <input type="text" class="form-control" id="Numero" name="Numero" maxlength="5">
+                    <input type="text" class="form-control" id="Numero" name="Numero" maxlength="5" required>
                 </div>
             </div>
 
@@ -193,17 +193,17 @@
                 <!-- Bairro -->
                 <div class="col-md-3 mb-3">
                     <label for="Bairro" class="form-label">Bairro</label>
-                    <input type="text" class="form-control" id="Bairro" name="Bairro" maxlength="100">
+                    <input type="text" class="form-control" id="Bairro" name="Bairro" maxlength="100" required>
                 </div>
                 <!-- Cidade -->
                 <div class="col-md-3 mb-3">
                     <label for="Cidade" class="form-label">Cidade</label>
-                    <input type="text" class="form-control" id="Cidade" name="Cidade" maxlength="75">
+                    <input type="text" class="form-control" id="Cidade" name="Cidade" maxlength="75" required>
                 </div>
                 <!-- UF -->
                 <div class="col-md-3 mb-3">
                     <label for="UF" class="form-label">Estado (UF)</label>
-                    <select class="form-select" id="UF" name="UF">
+                    <select class="form-select" id="UF" name="UF" required>
                         <option value="AC">Acre (AC)</option>
                         <option value="AL">Alagoas (AL)</option>
                         <option value="AP">Amapá (AP)</option>
@@ -236,7 +236,7 @@
                 <!-- CID modificado para select -->
                 <div class="col-md-3 mb-3">
                     <label for="CID" class="form-label">CID</label>
-                    <select class="form-select" id="CID" name="CID">
+                    <select class="form-select" id="CID" name="CID" required>
                         <option value="">Selecione o CID</option>
                         <?php
                         // Gera as opções no formato "CID - Nome"
@@ -274,6 +274,104 @@
     <button type="button" class="btn btn-secondary" onclick="window.location.href='index.html'">Cancelar</button>
     </form>
     </div>
+
+    <script>
+        $(document).ready(function() {
+            // Evento blur no campo CEP
+            $('#CEP').on('blur', function() {
+                var cep = $(this).val().replace(/\D/g, ''); // Remove caracteres não numéricos
+
+                if (cep.length === 8) { // Verifica se o CEP tem 8 dígitos
+                    // URL da API de consulta
+                    var url = `http://cep.republicavirtual.com.br/web_cep.php?cep=${cep}&formato=json`;
+
+                    // Faz a requisição para a API
+                    $.getJSON(url, function(data) {
+                        if (data.resultado === "1") {
+                            // Preenche os campos com os dados retornados
+                            $('#Endereco').val(data.logradouro);
+                            $('#Bairro').val(data.bairro);
+                            $('#Cidade').val(data.cidade);
+                            $('#UF').val(data.uf);
+                        } else {
+                            alert('CEP não encontrado.');
+                        }
+                    }).fail(function() {
+                        alert('Erro ao buscar o CEP. Tente novamente.');
+                    });
+                } else {
+                    alert('Por favor, insira um CEP válido com 8 dígitos.');
+                }
+            });
+        });
+
+        $(document).ready(function() {
+            // Validação de e-mail ao sair do campo
+            $('#Email').on('blur', function() {
+                var email = $(this).val();
+                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Expressão regular para validar e-mails
+
+                if (!emailRegex.test(email)) {
+                    alert('Por favor, insira um e-mail válido.');
+                    $(this).focus(); // Foca no campo de email novamente
+                }
+            });
+
+            // Máscara para o campo CEP (formato 00000-000)
+            $('#CEP').inputmask('99999-999');
+
+            // Máscara para o campo CPF (formato 000.000.000-00)
+            $('#CPF').inputmask('999.999.999-99');
+
+            // Máscara para o campo Celular (formato (00) 00000-0000 ou (00) 0000-0000)
+            $('#Celular, #Telefone_Responsavel').inputmask({
+                mask: ['(99) 9999-9999', '(99) 99999-9999'], // Formato adaptável para fixo e celular
+                keepStatic: true // Escolhe o formato correto dinamicamente
+            });
+
+
+
+            // Validação de CPF ao sair do campo
+            $('#CPF').on('blur', function() {
+                var cpf = $(this).val().replace(/\D/g, ''); // Remove caracteres não numéricos
+                if (!validarCPF(cpf)) {
+                    alert('Por favor, insira um CPF válido.');
+                    $(this).focus(); // Foca no campo de CPF novamente
+                }
+            });
+
+            // Função para validar CPF
+            function validarCPF(cpf) {
+                if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) {
+                    return false; // Verifica se tem 11 dígitos ou todos são iguais
+                }
+
+                var soma = 0;
+                var resto;
+
+                // Verificação do primeiro dígito verificador
+                for (var i = 1; i <= 9; i++) {
+                    soma += parseInt(cpf.substring(i - 1, i)) * (11 - i);
+                }
+
+                resto = (soma * 10) % 11;
+                if ((resto === 10) || (resto === 11)) resto = 0;
+                if (resto !== parseInt(cpf.substring(9, 10))) return false;
+
+                soma = 0;
+                // Verificação do segundo dígito verificador
+                for (i = 1; i <= 10; i++) {
+                    soma += parseInt(cpf.substring(i - 1, i)) * (12 - i);
+                }
+
+                resto = (soma * 10) % 11;
+                if ((resto === 10) || (resto === 11)) resto = 0;
+                if (resto !== parseInt(cpf.substring(10, 11))) return false;
+
+                return true; // CPF válido
+            }
+        });
+    </script>
 </body>
 
 </html>

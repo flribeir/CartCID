@@ -47,127 +47,6 @@ try {
 
     // Cria o conteúdo HTML da carteirinha
     $html = '<!DOCTYPE html>
-    <html lang="pt-BR">
-    <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carteirinha de Identificação</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .card {
-            width: 600px;
-            border: 2px solid #ccc;
-            border-radius: 10px;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .card-header, .card-body, .card-footer {
-            text-align: center;
-        }
-        .card-header img {
-            width: 80px;
-            vertical-align: middle;
-        }
-        .card-header h1 {
-            font-size: 20px;
-            margin: 5px 0;
-        }
-        .card-header p {
-            font-size: 12px;
-            margin: 0;
-            line-height: 1.2;
-        }
-        .card-body {
-            margin-top: 20px;
-            text-align: left;
-        }
-        .card-body .section {
-            margin-bottom: 10px;
-        }
-        .card-body .label {
-            font-weight: bold;
-            display: inline-block;
-            width: 150px;
-        }
-        .card-body img {
-            float: left;
-            width: 100px;
-            height: auto;
-            margin-right: 20px;
-            border-radius: 10px;
-        }
-        .card-footer img {
-            width: 60px;
-            margin-top: 20px;
-        }
-        .ribbon {
-            float: right;
-            width: 40px;
-        }
-
-    </style>
-    </head>
-    <body>
-
-    <div class="card">
-        <div class="card-header">
-            <img src="logo_rs.png" alt="Logo do Estado">
-            <h1>CARTEIRA DE IDENTIFICAÇÃO DA PESSOA COM AUTISMO</h1>
-            <p>GOVERNO DO ESTADO DE SÃO PAULO<br>
-            SECRETARIA DA IGUALDADE, CIDADANIA,<br>
-            DIREITOS HUMANOS E ASSISTÊNCIA SOCIAL<br>
-            FUNDAÇÃO DE ARTICULAÇÃO E DESENVOLVIMENTO<br>
-            DE POLÍTICAS PÚBLICAS PARA PESSOAS COM DEFICIÊNCIA<br>
-            E PESSOAS COM ALTAS HABILIDADES EM SP</p>
-        </div>
-
-        <div class="card-body">
-            <img src="avatar.png" alt="Foto da Pessoa">
-            <img src="ribbon.png" class="ribbon" alt="Laço colorido">
-
-            <div class="section">
-                <span class="label">Nome:</span>' . htmlspecialchars($registro['Nome']) . '<br>
-                <span class="label">Número:</span> ' . htmlspecialchars($registro['ID']) . '
-            </div>
-
-            <div class="section">
-                <span class="label">Tipo Sanguíneo:</span>' . htmlspecialchars($registro['Tipo_Sanguineo']) . '<br>
-                <span class="label">RG:</span>' . htmlspecialchars($registro['RG']) . '<br>
-                <span class="label">Data de Nascimento:</span>' . htmlspecialchars($registro['Dt_Nascimento']) . '
-            </div>
-
-            <div class="section">
-                <span class="label">Local de Nascimento:</span>' . htmlspecialchars($registro['Naturalidade']) . '<br>
-                <span class="label">Filiação:</span>' . htmlspecialchars($registro['Filiacao']) . '
-            </div>
-
-            <div class="section">
-                <span class="label">Endereço Residencial:</span>' . htmlspecialchars($registro['Endereco']) . ' - ' .
-        htmlspecialchars($registro['Bairro'])   . ', '  .
-        htmlspecialchars($registro['Cidade'])   . '/'   .
-        htmlspecialchars($registro['UF']) . '
-            </div>
-        </div>
-
-        <div class="card-footer">
-            <img src="logo_faders.png" alt="Logo da Faders">
-        </div>
-    </div>
-
-    </body>
-    </html>
-    ';
-
-    $html = '<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -311,6 +190,7 @@ try {
 </body>
 </html>
 ';
+    //    die($html);
 
     // Incluir a biblioteca TCPDF
     require_once('/usr/share/php/tcpdf/tcpdf.php'); // Atualize o caminho conforme necessário
