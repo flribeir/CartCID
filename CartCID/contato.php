@@ -282,22 +282,31 @@
                 var cep = $(this).val().replace(/\D/g, ''); // Remove caracteres não numéricos
 
                 if (cep.length === 8) { // Verifica se o CEP tem 8 dígitos
-                    // URL da API de consulta
-                    var url = `http://cep.republicavirtual.com.br/web_cep.php?cep=${cep}&formato=json`;
+                    // URL da nova API de consulta
+                    var url = `http://apoioaospais.com.br/cep/getEnderecoByCEP.php?cep=${cep}`;
 
-                    // Faz a requisição para a API
-                    $.getJSON(url, function(data) {
-                        if (data.resultado === "1") {
+                    // Faz a requisição para a nova API
+                    $.ajax({
+                        url: url,
+                        dataType: 'text', // Define que o retorno não é JSON
+                        success: function(response) {
+                            // Decodifica a resposta
+                            var params = new URLSearchParams(response);
+
                             // Preenche os campos com os dados retornados
-                            $('#Endereco').val(data.logradouro);
-                            $('#Bairro').val(data.bairro);
-                            $('#Cidade').val(data.cidade);
-                            $('#UF').val(data.uf);
-                        } else {
-                            alert('CEP não encontrado.');
+                            $('#Endereco').val(params.get('endereco')); // Logradouro
+                            $('#Bairro').val(params.get('bairro')); // Bairro
+                            $('#Cidade').val(params.get('cidade')); // Cidade
+                            $('#UF').val(params.get('uf')); // Estado
+
+                            // Verifica se a resposta contém a chave 'api' para garantir que a consulta foi bem-sucedida
+                            if (params.get('api') !== 'ViaCEP') {
+                                alert('CEP não encontrado.');
+                            }
+                        },
+                        error: function() {
+                            alert('Erro ao buscar o CEP. Tente novamente.');
                         }
-                    }).fail(function() {
-                        alert('Erro ao buscar o CEP. Tente novamente.');
                     });
                 } else {
                     alert('Por favor, insira um CEP válido com 8 dígitos.');
