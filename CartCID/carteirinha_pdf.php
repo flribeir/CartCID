@@ -23,7 +23,7 @@ try {
        c.Tipo_Sanguineo,
        c.RG,
        c.CPF,
-       c.Dt_Nascimento,
+       DATE_FORMAT (c.Dt_Nascimento,'%d/%m/%Y') Dt_Nascimento,
        c.Naturalidade,
        CASE
           WHEN c.Nome_Pai IS NOT NULL
@@ -35,7 +35,7 @@ try {
        c.Cidade,
        c.UF,
        c.QRCode,
-       c.Dt_Validade
+       DATE_FORMAT (c.Dt_Validade,'%d/%m/%Y') Dt_Validade
   FROM Carteirinha c
  WHERE ID = " . $ID;
     //    die($sql);
@@ -46,151 +46,76 @@ try {
     $registro = $stmt->fetch(PDO::FETCH_ASSOC);
 
     // Cria o conteúdo HTML da carteirinha
-    $html = '<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carteirinha de Identificação</title>
-    <style>
-        @media print {
-            body {
-                width: 15cm;
-                height: 10cm;
-                margin: 0;
-                padding: 0;
-            }
-
+    $html = '
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Carteirinha de Identificação</title>
+        <style>
             table {
                 width: 100%;
                 border-collapse: collapse;
             }
-
             td {
                 padding: 5px;
-                vertical-align: top;
             }
-
-            img {
-                display: block;
-                max-width: 100%;
-                height: auto;
-            }
-
-            .logo img, .foto img, .qrcode img {
-                max-width: 100%;
-                height: auto;
-            }
-
-            .logo {
-                text-align: center;
-            }
-
-            .titulo {
-                text-align: center;
-                font-size: 10pt;
-                font-weight: bold;
-            }
-
-            .foto {
-                text-align: center;
-                border: 1px solid black;
-                height: 5cm; /* Altura aproximada para a foto */
-                width: 4cm; /* Largura aproximada para a foto */
-            }
-
-            p {
-                margin: 0;
-                font-size: 10pt;
-                text-align: center;
-            }
-
-            .bold {
-                font-weight: bold;
-            }
+        .fundo {
+            background-image: url("background_carteirinha.jpg"); /* Adicione o caminho para seu arquivo PNG */
+            background-size: cover;
         }
-    </style>
-</head>
-<body>
-    <table>
-        <tr>
-            <td class="logo" colspan="1" width="25%">
-                <img src="https://servicos.prefeituradearuja.sp.gov.br/tbw/imagens/system/login/img-cliente.fw.png" alt="Logo" style="width: 80px; height: 80px;">
-            </td>
-            <td colspan="4" width="75%">
-                <p class="titulo">
-                    GOVERNO DO ESTADO DE SÃO PAULO<br>
-                    PREFEITURA DE ARUJÁ
-                </p>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="5">
-                <p class="titulo">CARTEIRINHA DE IDENTIFICAÇÃO DE PESSOA COM AUTISMO</p>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="5">
-                <p class="titulo">Nome: ' . htmlspecialchars($registro['Nome']) . '</p>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2" rowspan="6" class="foto">
-                <img src="' . $fotoDir . '" alt="Foto" style="width: 100px; height: 151px;">
-            </td>
-            <td>
-                <p class="titulo">Tipo Sanguíneo</p>
-            </td>
-            <td>
-                <p class="titulo">CPF</p>
-            </td>
-            <td>
-                <p class="titulo">Data de Nascimento</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>' . htmlspecialchars($registro['Tipo_Sanguineo']) . '</p>
-            </td>
-            <td>
-                <p>' . htmlspecialchars($registro['CPF']) . '</p>
-            </td>
-            <td>
-                <p>' . htmlspecialchars($registro['Dt_Nascimento']) . '</p>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="3">
-                <p class="titulo">Local de Nascimento</p>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="3">
-                <p>' . htmlspecialchars($registro['Naturalidade']) . '</p>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="3">
-                <p class="titulo">FILIAÇÃO</p>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="3">
-                <p>' . htmlspecialchars($registro['Filiacao']) . '</p>
-            </td>
-        </tr>
-    </table>
+            .carteirinha {
+                border: 2px solid #000;
+                padding: 10px;
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .foto {
+                width: 90px;
+                height: 110px;
+            }
+            .qrcode {
+                width: 90px;
+                height: 90px;
+            }
+            .info {
+                font-size: 12px;
+            }
+        </style>
+    </head>
+    <body>
+        <table border="0" cellpadding="5" cellspacing="0" class="carteirinha fundo">
+            <tr>
+                <td width="30%" align="center" valign="top">
+                    <img src="' . $fotoDir . '" alt="Foto" class="foto">
+                </td>
+                <td width="70%" valign="top" class="info">
+                    <strong>Registro:</strong> ' . htmlspecialchars($registro['ID']) . '<br>
+                    <strong>Nome:</strong> ' . htmlspecialchars($registro['Nome']) . '<br>
+                    <strong>CPF:</strong> ' . htmlspecialchars($registro['CPF']) . '<br>
+                    <strong>Nascimento:</strong> ' . htmlspecialchars($registro['Dt_Nascimento']) . '<br>
+                    <strong>Naturalidade:</strong> ' . htmlspecialchars($registro['Naturalidade']) . '<br>
+                    <strong>UF:</strong> ' . htmlspecialchars($registro['UF']) . '<br>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="right">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=' . htmlspecialchars($registro['QRCode']) . '" class="qrcode" alt="QR Code">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="right" class="info">
+                    <strong>Validade:</strong> ' . htmlspecialchars($registro['Dt_Validade']) . '
+                </td>
+            </tr>
+        </table>
+    </body>
+    </html>
+    ';
 
-    <div style="text-align: center">
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=' . htmlspecialchars($registro['QRCode']) . '" alt="QR Code"  style="width: 100px; height: 100px;">
-        <br>
-        <p><b>VALIDADE:</b></p>
-        <p><b>' . htmlspecialchars($registro['Dt_Validade']) . '</b></p>
-    </div>
-</body>
-</html>
-';
-    //    die($html);
+    die($html);
 
     // Incluir a biblioteca TCPDF
     require_once('/usr/share/php/tcpdf/tcpdf.php'); // Atualize o caminho conforme necessário
@@ -201,6 +126,8 @@ try {
     // Remover cabeçalho e rodapé padrão
     $pdf->setPrintHeader(false);
     $pdf->setPrintFooter(false);
+    // Definir imagem de fundo
+    //    $pdf->Image('background_carteirinha.jpg', 0, 0, 210, 297, '', '', '', false, 300, '', false, false, 0);
 
     // Adicionar uma página
     $pdf->AddPage();
