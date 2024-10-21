@@ -283,7 +283,7 @@
 
                 if (cep.length === 8) { // Verifica se o CEP tem 8 dígitos
                     // URL da nova API de consulta
-                    var url = `http://apoioaospais.com.br/cep/getEnderecoByCEP.php?cep=${cep}`;
+                    var url = `https://apoioaospais.com.br/cep/getEnderecoByCEP.php?cep=${cep}`;
 
                     // Faz a requisição para a nova API
                     $.ajax({
