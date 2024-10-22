@@ -123,14 +123,14 @@ try {
                                 <p><img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=' . htmlspecialchars($registro['QRCode']) . '" class="qrcode" alt="QR Code"></p>
                             </div>
                             <div class="validade">
-                                <p><strong>Validade:</strong> 08/2027</p>
+                                <p><strong>Validade:</strong> ' . htmlspecialchars($registro['Dt_Validade']) . '</p>
                             </div>
                         </div>
                     </body>
     </html>
     ';
 
-    //    die($html);
+    die($html);
 
     // Incluir a biblioteca TCPDF
     require_once('/usr/share/php/tcpdf/tcpdf.php'); // Atualize o caminho conforme necessário
