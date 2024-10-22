@@ -53,69 +53,84 @@ try {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Carteirinha de Identificação</title>
-        <style>
-            table {
-                width: 100%;
-                border-collapse: collapse;
-            }
-            td {
-                padding: 5px;
-            }
-        .fundo {
-            background-image: url("background_carteirinha.jpg"); /* Adicione o caminho para seu arquivo PNG */
-            background-size: cover;
-        }
-            .carteirinha {
-                border: 2px solid #000;
-                padding: 10px;
-                width: 100%;
-                height: auto;
-                position: relative;
-            }
-            .foto {
-                width: 90px;
-                height: 110px;
-            }
-            .qrcode {
-                width: 90px;
-                height: 90px;
-            }
-            .info {
-                font-size: 12px;
-            }
-        </style>
+<style>
+                            .carteirinha {
+                                width: 650px;
+                                height: auto;
+                                border: 2px solid #000;
+                                padding: 10px;
+                                box-sizing: border-box;
+                                position: relative;
+                            }
+                            .fundo {
+                                background-image: url("background_carteirinha.jpg"); /* Adicione o caminho para seu arquivo PNG */
+                                background-size: cover;
+                            }
+                            .logo {
+                                position: absolute;
+                                top: 10px;
+                                right: 10px;
+                                width: 60px;
+                                height: 60px;
+                            }
+                            .qrcode {
+                                position: absolute;
+                                bottom: 0px;
+                                right: 0px;
+                                width: 90px;
+                                height: 90px;
+                                border: 1px solid #000;
+                                text-align: center;
+                                line-height: 80px;
+                            }
+                            .validade {
+                                position: absolute;
+                                bottom: 100px;
+                                right: 10px;
+                            }
+                            .foto {
+                                width: 90px;
+                                height: 110px;
+                                border: 1px solid #000;
+                                margin-right: 11px;
+                                text-align: center;
+                                line-height: 100px;
+                                float: left;
+                            }
+                            .info {
+                                overflow: hidden;
+                            }
+                        </style>
     </head>
-    <body>
-        <table border="0" cellpadding="5" cellspacing="0" class="carteirinha fundo">
-            <tr>
-                <td width="30%" align="center" valign="top">
-                    <img src="' . $fotoDir . '" alt="Foto" class="foto">
-                </td>
-                <td width="70%" valign="top" class="info">
-                    <strong>Registro:</strong> ' . htmlspecialchars($registro['ID']) . '<br>
-                    <strong>Nome:</strong> ' . htmlspecialchars($registro['Nome']) . '<br>
-                    <strong>CPF:</strong> ' . htmlspecialchars($registro['CPF']) . '<br>
-                    <strong>Nascimento:</strong> ' . htmlspecialchars($registro['Dt_Nascimento']) . '<br>
-                    <strong>Naturalidade:</strong> ' . htmlspecialchars($registro['Naturalidade']) . '<br>
-                    <strong>UF:</strong> ' . htmlspecialchars($registro['UF']) . '<br>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2" align="right">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=' . htmlspecialchars($registro['QRCode']) . '" class="qrcode" alt="QR Code">
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2" align="right" class="info">
-                    <strong>Validade:</strong> ' . htmlspecialchars($registro['Dt_Validade']) . '
-                </td>
-            </tr>
-        </table>
-    </body>
+<body>
+                        <div class="carteirinha fundo">
+                            <br>
+                            <br>
+                            <br><br><br><br>
+                            <p><strong> </strong></p>
+                            <div class="foto">
+                                <img src="' . $fotoDir . '" alt="Foto" class="foto">
+                            </div>
+                            <div class="info">
+                                <p> <strong>Registro:</strong> ' . htmlspecialchars($registro['ID']) . '</p>
+                                <p> <strong>Nome:</strong> ' . htmlspecialchars($registro['Nome']) . '</p>
+                                <p> <strong>CPF:</strong> ' . htmlspecialchars($registro['CPF']) . '</p>
+                                <p> <strong>Nascimento:</strong> ' . htmlspecialchars($registro['Dt_Nascimento']) . '</p>
+                                <p> <strong>Naturalidade:</strong> ' . htmlspecialchars($registro['Naturalidade']) . '</p>
+                                <p> <strong>UF:</strong> ' . htmlspecialchars($registro['UF']) . '</p>
+                            </div>
+                            <div class="qrcode">
+                                <p><img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=' . htmlspecialchars($registro['QRCode']) . '" class="qrcode" alt="QR Code"></p>
+                            </div>
+                            <div class="validade">
+                                <p><strong>Validade:</strong> 08/2027</p>
+                            </div>
+                        </div>
+                    </body>
     </html>
     ';
 
-    die($html);
+    //    die($html);
 
     // Incluir a biblioteca TCPDF
     require_once('/usr/share/php/tcpdf/tcpdf.php'); // Atualize o caminho conforme necessário
