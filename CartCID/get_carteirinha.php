@@ -21,10 +21,10 @@ $qrcode = $_GET['qrcode'];
 
 try {
     // Configuração da conexão ao banco de dados
-    $servername = "127.0.0.1";
-    $username   = "root";
-    $password   = "univesp";
-    $dbname     = "CartCID";
+    $servername = "sql206.infinityfree.com";
+    $username   = "if0_37631008";
+    $password   = "krx5w1X279";
+    $dbname     = "if0_37631008_CartCID";
 
     // Conectando ao banco de dados usando PDO
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -33,6 +33,7 @@ try {
     // SQL para buscar o registro na tabela Carteirinha com o QRCode especificado
     $sql = "SELECT ID,
                    Nome,
+                   CPF,
                    QRCode,
                    Dt_Validade
               FROM Carteirinha
@@ -47,7 +48,7 @@ try {
 
     if ($result) {
         // Caminho base para a imagem
-        $imageBaseUrl = "http://localhost/CartCID/files/fotos/";
+        $imageBaseUrl = "http://cartcid.free.nf/files/fotos/";
 
         // Monta o caminho completo para a imagem baseado no ID
         $imagePath = $imageBaseUrl . $result['ID'] . "_foto.PNG";
@@ -58,6 +59,7 @@ try {
             "data" => [
                 "Nome"        => $result['Nome'],
                 "ID"          => $result['ID'],
+                "CPF"         => $result['CPF'],
                 "Dt_Validade" => $result['Dt_Validade'],
                 "Imagem"      => $imagePath
             ]

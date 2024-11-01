@@ -5,10 +5,10 @@ error_reporting(E_ALL);
 
 try {
     // Configuração da conexão ao banco de dados
-    $servername = "127.0.0.1";
-    $username   = "root";
-    $password   = "univesp";
-    $dbname     = "CartCID";
+        $servername = "sql206.infinityfree.com";
+        $username = "if0_37631008";
+        $password = "krx5w1X279";
+        $dbname   = "if0_37631008_CartCID";
 
     // Conectando ao banco de dados usando PDO
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -40,10 +40,14 @@ try {
     $cidade               = $_POST['Cidade'];
     $uf                   = $_POST['UF'];
     $CID                  = $_POST['CID'];
+    $QRCode               = rand(1,2000);
+    $Validade             = new DateTime();
+    $Validade->modify('+1 year');
+    $Validadetratada      = $Validade->format('Y-m-d H:i:s'); // Formato desejado
 
     // SQL para inserir dados na tabela Carteirinha
-    $sql = "INSERT INTO Carteirinha (Nome, CPF, RG, RG_Orgao_Expeditor, RG_Data_Expeditor, Sexo, Tipo_Sanguineo, Dt_Nascimento, Celular, Email, Naturalidade, Nacionalidade, Nome_Pai, Nome_Mae, Nome_Responsavel, Telefone_Responsavel, Email_Responsavel, CEP, Endereco, Numero, Complemento, Bairro, Cidade, UF, CID)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO Carteirinha (Nome, CPF, RG, RG_Orgao_Expeditor, RG_Data_Expeditor, Sexo, Tipo_Sanguineo, Dt_Nascimento, Celular, Email, Naturalidade, Nacionalidade, Nome_Pai, Nome_Mae, Nome_Responsavel, Telefone_Responsavel, Email_Responsavel, CEP, Endereco, Numero, Complemento, Bairro, Cidade, UF, CID, QRCode, Dt_Validade)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
     // Prepara a declaração SQL para execução
     $stmt = $conn->prepare($sql);
@@ -74,7 +78,9 @@ try {
         $bairro,
         $cidade,
         $uf,
-        $CID
+        $CID,
+        $QRCode,
+        $Validadetratada
     ]);
 
     // Obter o ID do último registro inserido

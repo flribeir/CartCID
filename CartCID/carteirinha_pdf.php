@@ -5,14 +5,13 @@ error_reporting(E_ALL);
 
 try {
     // Configuração da conexão ao banco de dados
-    $servername = "127.0.0.1";
-    $username   = "root";
-    $password   = "univesp";
-    $dbname     = "CartCID";
-    $ID         = isset($_GET['id']) ? intval($_GET['id']) : (isset($_POST['id']) ? intval($_POST['id']) : 0);
-    $fotoDir    = "files/fotos/" . $ID . "_foto.PNG";
-    $APIQRCode  = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" . $ID;
-    //    die('aki' . $ID);
+    $servername    = "sql206.infinityfree.com";
+    $username      = "if0_37631008";
+    $password      = "krx5w1X279";
+    $dbname        = "if0_37631008_CartCID";
+    $Identificador = isset($_GET['id']) ? intval($_GET['id']) : (isset($_POST['id']) ? intval($_POST['id']) : 0);
+    $fotoDir       = "files/fotos/" . $Identificador . "_foto.PNG";
+    $APIQRCode     = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" . $Identificador;
 
     // Conectando ao banco de dados usando PDO
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -37,11 +36,10 @@ try {
        c.QRCode,
        DATE_FORMAT (c.Dt_Validade,'%d/%m/%Y') Dt_Validade
   FROM Carteirinha c
- WHERE ID = " . $ID;
-    //    die($sql);
+ WHERE ID = " . $Identificador;
+//        die($sql);
 
     $stmt = $conn->prepare($sql);
-    $stmt->bindParam(':id', $id); // Supondo que $id contém o ID desejado
     $stmt->execute();
     $registro = $stmt->fetch(PDO::FETCH_ASSOC);
 

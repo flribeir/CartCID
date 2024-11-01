@@ -29,10 +29,10 @@
 
         <?php
         // Conexão com o banco de dados
-        $servername = "127.0.0.1";
-        $username = "root";
-        $password = "univesp";
-        $dbname   = "CartCID";
+        $servername = "sql206.infinityfree.com";
+        $username   = "if0_37631008";
+        $password   = "krx5w1X279";
+        $dbname     = "if0_37631008_CartCID";
 
         try {
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
