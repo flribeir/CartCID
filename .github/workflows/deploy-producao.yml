@@ -1,30 +1,4 @@
-name: "Deploy Produção"
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Deploy Start
-        run: echo "Repositório [${{ github.event.repository.name }}] no branch [main]"
-
-      # Passo Obrigatório: Executar o Git Pull no servidor
-      - name: Deploy via SSH - Git Pull
-        uses: appleboy/ssh-action@v1.2.0
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          port: ${{ secrets.SSH_PORT }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_KEY }}
-          script: |
-            # Comando a serem executados no terminal
-            cd /home/ubuntu/CartCID/CartCID/
-            git pull --rebase origin
-
-      - name: Deploy End
-        run: echo "Efetuado deploy de Homologação do repositório [${{ github.event.repository.name }}]"
+- name: Debug Secrets
+  run: |
+    echo "Host: ${{ secrets.SSH_HOST }}"
+    echo "User: ${{ secrets.SSH_USER }}"
