@@ -15,7 +15,7 @@ jobs:
 
       # Passo Obrigatório: Executar o Git Pull no servidor
       - name: Deploy via SSH - Git Pull
-        uses: appleboy/ssh-action@v1.8.0
+        uses: appleboy/ssh-action@v1.2.0
         with:
           host: ${{ secrets.SSH_HOST }}
           port: ${{ secrets.SSH_PORT }}
