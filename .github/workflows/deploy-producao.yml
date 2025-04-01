@@ -3,7 +3,7 @@ name: "Deploy Produção"
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deploy:
@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Deploy Start
-        run: echo "Repositório [${{ github.event.repository.name }}] no branch [master]"
+        run: echo "Repositório [${{ github.event.repository.name }}] no branch [main]"
 
       # Passo Obrigatório: Executar o Git Pull no servidor
       - name: Deploy via SSH - Git Pull
