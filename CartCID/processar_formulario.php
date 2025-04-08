@@ -53,6 +53,34 @@ try {
     $Validade->modify('+1 year');
     $Validadetratada      = $Validade->format('Y-m-d H:i:s'); // Formato desejado
 
+    // Verificar se o CPF já existe na tabela
+    $sqlCheck = "SELECT COUNT(*) FROM Carteirinha WHERE CPF = ?";
+    $stmtCheck = $conn->prepare($sqlCheck);
+    $stmtCheck->execute([$cpf]);
+    $existe = $stmtCheck->fetchColumn();
+
+    if ($existe > 0) {
+        // CPF já cadastrado
+        echo "<!DOCTYPE html>
+        <html lang='pt-BR'>
+        <head>
+            <meta charset='UTF-8'>
+            <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+            <title>Erro de CPF</title>
+            <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet'>
+        </head>
+        <body class='bg-light'>
+            <div class='container mt-5'>
+                <div class='alert alert-danger' role='alert'>
+                    Este CPF já está cadastrado no sistema!
+                </div>
+                <a href='javascript:history.back()' class='btn btn-primary'>Voltar</a>
+            </div>
+        </body>
+        </html>";
+        exit();
+    }
+
     // SQL para inserir dados na tabela Carteirinha
     $sql = "INSERT INTO Carteirinha (Nome, CPF, RG, RG_Orgao_Expeditor, RG_Data_Expeditor, Sexo, Tipo_Sanguineo, Dt_Nascimento, Celular, Email, Naturalidade, Nacionalidade, Nome_Pai, Nome_Mae, Nome_Responsavel, Telefone_Responsavel, Email_Responsavel, CEP, Endereco, Numero, Complemento, Bairro, Cidade, UF, CID, QRCode, Dt_Validade)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
