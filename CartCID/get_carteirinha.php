@@ -21,10 +21,20 @@ $qrcode = $_GET['qrcode'];
 
 try {
     // Configuração da conexão ao banco de dados
-    $servername = "sql206.infinityfree.com";
-    $username   = "if0_37631008";
-    $password   = "krx5w1X279";
-    $dbname     = "if0_37631008_CartCID";
+    // Verifica se está em produção ou desenvolvimento
+    if (file_exists('production.flag')) {
+        // Conexão com o banco de dados
+        $servername = "sql206.infinityfree.com";
+        $username   = "if0_37631008";
+        $password   = "krx5w1X279";
+        $dbname     = "if0_37631008_CartCID";
+    } else {
+        // Desenvolvimento local
+        $servername = "127.0.0.1";
+        $username   = "root";
+        $password   = "univesp";
+        $dbname     = "CartCID";
+    }
 
     // Conectando ao banco de dados usando PDO
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);

@@ -4,11 +4,19 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 try {
-    // Configuração da conexão ao banco de dados
+    if (file_exists('production.flag')) {
+        // Conexão com o banco de dados
         $servername = "sql206.infinityfree.com";
-        $username = "if0_37631008";
-        $password = "krx5w1X279";
-        $dbname   = "if0_37631008_CartCID";
+        $username   = "if0_37631008";
+        $password   = "krx5w1X279";
+        $dbname     = "if0_37631008_CartCID";
+    } else {
+        // Desenvolvimento local
+        $servername = "127.0.0.1";
+        $username   = "root";
+        $password   = "univesp";
+        $dbname     = "CartCID";
+    }
 
     // Conectando ao banco de dados usando PDO
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -40,7 +48,7 @@ try {
     $cidade               = $_POST['Cidade'];
     $uf                   = $_POST['UF'];
     $CID                  = $_POST['CID'];
-    $QRCode               = rand(1,2000);
+    $QRCode               = rand(1, 2000);
     $Validade             = new DateTime();
     $Validade->modify('+1 year');
     $Validadetratada      = $Validade->format('Y-m-d H:i:s'); // Formato desejado
