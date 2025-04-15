@@ -4,11 +4,21 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 try {
-    // Configuração da conexão ao banco de dados
-    $servername    = "sql206.infinityfree.com";
-    $username      = "if0_37631008";
-    $password      = "krx5w1X279";
-    $dbname        = "if0_37631008_CartCID";
+    // Verifica se está em produção ou desenvolvimento
+    if (file_exists('production.flag')) {
+        // Conexão com o banco de dados
+        $servername = "sql206.infinityfree.com";
+        $username   = "if0_37631008";
+        $password   = "krx5w1X279";
+        $dbname     = "if0_37631008_CartCID";
+    } else {
+        // Desenvolvimento local
+        $servername = "127.0.0.1";
+        $username   = "root";
+        $password   = "univesp";
+        $dbname     = "CartCID";
+    }
+
     $Identificador = isset($_GET['id']) ? intval($_GET['id']) : (isset($_POST['id']) ? intval($_POST['id']) : 0);
     $fotoDir       = "files/fotos/" . $Identificador . "_foto.PNG";
     $APIQRCode     = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" . $Identificador;
@@ -37,7 +47,7 @@ try {
        DATE_FORMAT (c.Dt_Validade,'%d/%m/%Y') Dt_Validade
   FROM Carteirinha c
  WHERE ID = " . $Identificador;
-//        die($sql);
+    //        die($sql);
 
     $stmt = $conn->prepare($sql);
     $stmt->execute();
