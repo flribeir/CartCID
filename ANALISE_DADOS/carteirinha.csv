@@ -1,0 +1,145 @@
+ID;CID;Nome;CPF;RG;RG_Orgao_Expeditor;RG_Data_Expeditor;Sexo;Tipo_Sanguineo;Dt_Nascimento;Celular;Email;Naturalidade;Nacionalidade;Nome_Pai;Nome_Mae;Nome_Responsavel;Telefone_Responsavel;Email_Responsavel;CEP;Endereco;Numero;Complemento;Bairro;Cidade;UF;QRCode;Dt_Validade;Dt_Inclusao
+1;128;;;;;;M;O+;1981-11-18;;;Guararema;Brasileira;;;;;;07417280;;;;Parque Rodrigo Barreto;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-11-11 00:00:00
+2;128;;;;;;M;B-;2014-10-07;;;Itaquaquecetuba;Brasileira;;;;;;07417195;;;;Parque Rodrigo Barreto;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-12-23 00:00:00
+3;128;;;;;;F;AB+;2017-03-22;;;Biritiba Mirim;Brasileira;;;;;;07431410;;;;Jardim Cury;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-02-12 00:00:00
+4;128;;;;;;M;O+;2014-04-07;;;Santa Isabel;Brasileira;;;;;;07434455;;;;Arujázinho IV;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-10-25 00:00:00
+5;128;;;;;;F;O-;2020-08-16;;;Poá;Brasileira;;;;;;07417490;;;;Parque Rodrigo Barreto;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-12-18 00:00:00
+6;128;;;;;;F;A+;2015-11-14;;;Santa Isabel;Brasileira;;;;;;07428240;;;;Jardim Fazenda Rincão;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-01-27 00:00:00
+7;128;;;;;;F;AB+;2018-06-16;;;Salesópolis;Brasileira;;;;;;07429250;;;;Residencial Real Park;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-11-04 00:00:00
+8;128;;;;;;F;AB-;2021-02-22;;;Guarulhos;Brasileira;;;;;;07428330;;;;Jardim Fazenda Rincão;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-02-12 00:00:00
+9;128;;;;;;F;B+;2018-01-06;;;Santa Isabel;Brasileira;;;;;;07404180;;;;Mirante do Arujá;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-10-12 00:00:00
+10;128;;;;;;M;B+;2016-12-10;;;Suzano;Brasileira;;;;;;07404065;;;;Mirante do Arujá;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-11-27 00:00:00
+11;128;;;;;;M;A+;2013-03-11;;;Guarulhos;Brasileira;;;;;;07404155;;;;Mirante do Arujá;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-01-12 00:00:00
+12;128;;;;;;F;O-;2017-01-13;;;Suzano;Brasileira;;;;;;07404160;;;;Mirante do Arujá;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-11-08 00:00:00
+13;128;;;;;;F;B-;2024-03-11;;;Suzano;Brasileira;;;;;;07435270;;;;Arujá Country Club;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-10-10 00:00:00
+14;128;;;;;;M;A-;2022-04-07;;;Poá;Brasileira;;;;;;07435675;;;;Arujázinho I, II e III;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-12-03 00:00:00
+15;128;;;;;;M;B-;2009-07-31;;;Suzano;Brasileira;;;;;;07435635;;;;Arujázinho I, II e III;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-01-24 00:00:00
+16;128;;;;;;M;B+;1974-11-22;;;Santa Isabel;Brasileira;;;;;;07400870;;;;Arujá Centro Residencial;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-02-12 00:00:00
+17;128;;;;;;F;B+;2024-06-09;;;Ferraz de Vasconcelos;Brasileira;;;;;;07400445;;;;Jardim Rincão;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-12-07 00:00:00
+18;128;;;;;;F;B+;2003-08-18;;;Ferraz de Vasconcelos;Brasileira;;;;;;07434480;;;;Arujázinho IV;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-10-18 00:00:00
+19;128;;;;;;M;B+;2018-07-21;;;Biritiba Mirim;Brasileira;;;;;;07417315;;;;Parque Rodrigo Barreto;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-12-30 00:00:00
+20;128;;;;;;M;O+;2017-08-21;;;Poá;Brasileira;;;;;;07429310;;;;Residencial Real Park;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-12-07 00:00:00
+21;128;;;;;;F;O+;2008-04-23;;;Suzano;Brasileira;;;;;;07400420;;;;Jardim Rincão;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-12-24 00:00:00
+22;128;;;;;;F;AB-;2017-01-05;;;Poá;Brasileira;;;;;;07435255;;;;Arujá Country Club;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-10-12 00:00:00
+23;128;;;;;;F;B+;2011-09-13;;;Santa Isabel;Brasileira;;;;;;07428325;;;;Jardim Fazenda Rincão;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-02-19 00:00:00
+24;128;;;;;;F;O+;2020-08-29;;;Biritiba Mirim;Brasileira;;;;;;07400865;;;;Arujá Centro Residencial;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-10-13 00:00:00
+25;128;;;;;;F;O+;2021-12-29;;;Ferraz de Vasconcelos;Brasileira;;;;;;07429230;;;;Residencial Real Park;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-03-04 00:00:00
+26;128;;;;;;F;O+;1989-10-21;;;Itaquaquecetuba;Brasileira;;;;;;07435635;;;;Arujázinho I, II e III;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-12-22 00:00:00
+27;128;;;;;;F;O+;2023-02-28;;;Suzano;Brasileira;;;;;;07404155;;;;Mirante do Arujá;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-11-03 00:00:00
+28;128;;;;;;F;A-;2017-05-09;;;Biritiba Mirim;Brasileira;;;;;;07417255;;;;Parque Rodrigo Barreto;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-11-19 00:00:00
+29;128;;;;;;F;B+;2009-03-03;;;Salesópolis;Brasileira;;;;;;07400465;;;;Jardim Rincão;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-12-17 00:00:00
+30;128;;;;;;F;B+;1971-07-29;;;Suzano;Brasileira;;;;;;07417505;;;;Parque Rodrigo Barreto;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-12-29 00:00:00
+31;128;;;;;;M;B-;2020-12-13;;;Guarulhos;Brasileira;;;;;;07431425;;;;Jardim Cury;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-03-01 00:00:00
+32;128;;;;;;F;AB-;2024-12-31;;;Santa Isabel;Brasileira;;;;;;07428080;;;;Jardim Fazenda Rincão;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-02-12 00:00:00
+33;128;;;;;;F;AB-;2015-08-07;;;Santa Isabel;Brasileira;;;;;;07439045;;;;Chácaras Copaco;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-01-14 00:00:00
+34;128;;;;;;M;AB-;2013-12-07;;;Guararema;Brasileira;;;;;;07417320;;;;Parque Rodrigo Barreto;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-01-08 00:00:00
+35;128;;;;;;M;B-;2013-03-12;;;Salesópolis;Brasileira;;;;;;07435200;;;;Arujá Country Club;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-12-31 00:00:00
+36;128;;;;;;M;A-;2018-02-19;;;Guararema;Brasileira;;;;;;07400370;;;;Jardim Rincão;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-10-04 00:00:00
+37;128;;;;;;F;O+;2019-01-29;;;Guararema;Brasileira;;;;;;07417220;;;;Parque Rodrigo Barreto;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-12-05 00:00:00
+38;128;;;;;;F;B+;1970-12-02;;;Ferraz de Vasconcelos;Brasileira;;;;;;07439010;;;;Chácaras Copaco;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-10-09 00:00:00
+39;128;;;;;;F;AB-;1974-08-25;;;Ferraz de Vasconcelos;Brasileira;;;;;;07400785;;;;Arujá Centro Residencial;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-12-05 00:00:00
+40;128;;;;;;F;AB-;2017-02-18;;;Biritiba Mirim;Brasileira;;;;;;07435585;;;;Arujázinho I, II e III;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-11-10 00:00:00
+41;128;;;;;;F;AB-;2022-01-26;;;Guarulhos;Brasileira;;;;;;07417185;;;;Parque Rodrigo Barreto;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-12-28 00:00:00
+42;128;;;;;;F;A+;2013-12-29;;;Biritiba Mirim;Brasileira;;;;;;07400805;;;;Arujá Centro Residencial;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-11-07 00:00:00
+43;128;;;;;;M;A+;2018-07-12;;;Guararema;Brasileira;;;;;;07400015;;;;Centro;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-10-13 00:00:00
+44;128;;;;;;F;A+;2013-10-22;;;Suzano;Brasileira;;;;;;07435555;;;;Arujázinho I, II e III;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-10-30 00:00:00
+45;128;;;;;;M;B-;2016-09-10;;;Guararema;Brasileira;;;;;;07428220;;;;Jardim Fazenda Rincão;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-01-30 00:00:00
+46;128;;;;;;F;A+;2020-03-17;;;Poá;Brasileira;;;;;;07417110;;;;Parque Rodrigo Barreto;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-11-03 00:00:00
+47;128;;;;;;M;A-;2015-11-20;;;Ferraz de Vasconcelos;Brasileira;;;;;;07404030;;;;Mirante do Arujá;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-10-13 00:00:00
+48;128;;;;;;M;B-;2011-10-23;;;Poá;Brasileira;;;;;;07400455;;;;Jardim Rincão;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-02-09 00:00:00
+49;128;;;;;;M;A-;2020-04-15;;;Suzano;Brasileira;;;;;;07429270;;;;Residencial Real Park;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-01-16 00:00:00
+50;128;;;;;;M;O-;2022-09-16;;;Biritiba Mirim;Brasileira;;;;;;07435685;;;;Arujázinho I, II e III;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-01-02 00:00:00
+51;128;;;;;;M;A-;2023-09-15;;;Ferraz de Vasconcelos;Brasileira;;;;;;07429275;;;;Residencial Real Park;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-12-30 00:00:00
+52;128;;;;;;M;AB+;2018-07-22;;;Mogi das Cruzes;Brasileira;;;;;;07400595;;;;Centro;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-12-18 00:00:00
+53;128;;;;;;F;B+;1989-09-10;;;Mogi das Cruzes;Brasileira;;;;;;07435590;;;;Arujázinho I, II e III;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-02-24 00:00:00
+54;128;;;;;;F;B-;2020-05-25;;;Poá;Brasileira;;;;;;07404115;;;;Mirante do Arujá;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-12-19 00:00:00
+55;128;;;;;;M;A-;2017-07-26;;;Salesópolis;Brasileira;;;;;;07429230;;;;Residencial Real Park;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-12-21 00:00:00
+56;128;;;;;;M;AB+;2021-11-26;;;Poá;Brasileira;;;;;;07404210;;;;Mirante do Arujá;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-11-17 00:00:00
+57;128;;;;;;F;B-;1984-03-08;;;Arujá;Brasileira;;;;;;07439050;;;;Chácaras Copaco;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-11-25 00:00:00
+58;128;;;;;;M;A-;2018-03-13;;;Salesópolis;Brasileira;;;;;;07404075;;;;Mirante do Arujá;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-12-28 00:00:00
+59;128;;;;;;F;A+;2017-07-03;;;Suzano;Brasileira;;;;;;07439000;;;;Chácaras Copaco;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-10-31 00:00:00
+60;128;;;;;;F;O+;2023-07-14;;;Salesópolis;Brasileira;;;;;;07428290;;;;Jardim Fazenda Rincão;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-11-27 00:00:00
+61;128;;;;;;M;O+;2013-10-27;;;Guarulhos;Brasileira;;;;;;07404105;;;;Mirante do Arujá;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-01-30 00:00:00
+62;128;;;;;;F;B-;2000-12-15;;;Santa Isabel;Brasileira;;;;;;07400971;;;;Centro;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-01-13 00:00:00
+63;128;;;;;;M;A+;2015-01-02;;;Poá;Brasileira;;;;;;07400450;;;;Jardim Rincão;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-11-01 00:00:00
+64;128;;;;;;F;O-;2014-03-26;;;Poá;Brasileira;;;;;;07404290;;;;Mirante do Arujá;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-02-28 00:00:00
+65;128;;;;;;M;B-;2022-05-17;;;Guararema;Brasileira;;;;;;07404290;;;;Mirante do Arujá;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-10-21 00:00:00
+66;128;;;;;;F;B-;2016-01-14;;;Itaquaquecetuba;Brasileira;;;;;;07417285;;;;Parque Rodrigo Barreto;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-10-25 00:00:00
+67;128;;;;;;F;B+;2021-08-26;;;Ferraz de Vasconcelos;Brasileira;;;;;;07400565;;;;Centro;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-10-24 00:00:00
+68;128;;;;;;F;O+;2021-11-30;;;Salesópolis;Brasileira;;;;;;07400665;;;;Arujá Centro Residencial;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-01-29 00:00:00
+69;128;;;;;;M;A-;2018-08-08;;;Mogi das Cruzes;Brasileira;;;;;;07400745;;;;Arujá Centro Residencial;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-02-24 00:00:00
+70;128;;;;;;F;O-;2007-05-27;;;Itaquaquecetuba;Brasileira;;;;;;07400880;;;;Arujá Centro Residencial;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-12-15 00:00:00
+71;128;;;;;;M;AB-;2020-11-22;;;Santa Isabel;Brasileira;;;;;;07403110;;;;Arujamérica;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-10-02 00:00:00
+72;128;;;;;;M;A+;2008-04-17;;;Poá;Brasileira;;;;;;07417260;;;;Parque Rodrigo Barreto;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-01-08 00:00:00
+73;128;;;;;;F;A-;2018-04-27;;;Arujá;Brasileira;;;;;;07435250;;;;Arujá Country Club;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-10-22 00:00:00
+74;128;;;;;;F;B-;2016-09-18;;;Arujá;Brasileira;;;;;;07403030;;;;Arujamérica;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-01-20 00:00:00
+75;128;;;;;;F;B+;2013-07-04;;;Biritiba Mirim;Brasileira;;;;;;07404115;;;;Mirante do Arujá;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-10-23 00:00:00
+76;128;;;;;;M;O-;2015-11-01;;;Biritiba Mirim;Brasileira;;;;;;07428230;;;;Jardim Fazenda Rincão;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-12-21 00:00:00
+77;128;;;;;;M;B-;2013-06-09;;;Suzano;Brasileira;;;;;;07417490;;;;Parque Rodrigo Barreto;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-02-16 00:00:00
+78;128;;;;;;M;B-;2018-01-19;;;Guararema;Brasileira;;;;;;07400030;;;;Centro;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-10-10 00:00:00
+79;128;;;;;;M;B-;2017-12-04;;;Arujá;Brasileira;;;;;;07435210;;;;Arujá Country Club;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-01-22 00:00:00
+80;128;;;;;;M;A-;2013-03-11;;;Guararema;Brasileira;;;;;;07435470;;;;Arujázinho I, II e III;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-12-15 00:00:00
+81;128;;;;;;M;AB-;2014-08-08;;;Santa Isabel;Brasileira;;;;;;07428305;;;;Jardim Fazenda Rincão;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-11-23 00:00:00
+82;128;;;;;;M;AB+;2013-08-31;;;Suzano;Brasileira;;;;;;07429200;;;;Residencial Real Park;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-02-25 00:00:00
+83;128;;;;;;F;A+;2016-01-12;;;Arujá;Brasileira;;;;;;07417595;;;;Parque Rodrigo Barreto;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-02-23 00:00:00
+84;128;;;;;;M;AB+;1969-01-05;;;Biritiba Mirim;Brasileira;;;;;;07417535;;;;Parque Rodrigo Barreto;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-12-04 00:00:00
+85;128;;;;;;M;B+;2021-02-16;;;Santa Isabel;Brasileira;;;;;;07435240;;;;Arujá Country Club;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-11-19 00:00:00
+86;128;;;;;;F;O-;2023-04-29;;;Guararema;Brasileira;;;;;;07439050;;;;Chácaras Copaco;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-11-12 00:00:00
+87;128;;;;;;M;O-;2022-09-24;;;Suzano;Brasileira;;;;;;07417185;;;;Parque Rodrigo Barreto;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-02-18 00:00:00
+88;128;;;;;;F;B+;2021-09-18;;;Ferraz de Vasconcelos;Brasileira;;;;;;07431390;;;;Jardim Cury;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-11-19 00:00:00
+89;128;;;;;;M;A+;2012-02-11;;;Itaquaquecetuba;Brasileira;;;;;;07435305;;;;Arujá Country Club;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-01-27 00:00:00
+90;128;;;;;;F;A+;2017-09-23;;;Suzano;Brasileira;;;;;;07431400;;;;Jardim Cury;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-01-08 00:00:00
+91;128;;;;;;F;O-;2023-04-08;;;Suzano;Brasileira;;;;;;07400715;;;;Arujá Centro Residencial;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-03-02 00:00:00
+92;128;;;;;;F;B+;2021-01-31;;;Itaquaquecetuba;Brasileira;;;;;;07435225;;;;Arujá Country Club;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-11-05 00:00:00
+93;128;;;;;;F;B+;2015-10-29;;;Biritiba Mirim;Brasileira;;;;;;07417475;;;;Parque Rodrigo Barreto;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-01-14 00:00:00
+94;128;;;;;;M;O+;2022-10-14;;;Ferraz de Vasconcelos;Brasileira;;;;;;07428170;;;;Jardim Fazenda Rincão;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-10-06 00:00:00
+95;128;;;;;;M;B-;2024-02-18;;;Guararema;Brasileira;;;;;;07417390;;;;Parque Rodrigo Barreto;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-01-29 00:00:00
+96;128;;;;;;M;A+;2023-02-18;;;Santa Isabel;Brasileira;;;;;;07417245;;;;Parque Rodrigo Barreto;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-12-23 00:00:00
+97;128;;;;;;F;B+;2017-03-28;;;Mogi das Cruzes;Brasileira;;;;;;07435485;;;;Arujázinho I, II e III;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-11-17 00:00:00
+98;128;;;;;;M;A+;2021-07-28;;;Poá;Brasileira;;;;;;07404070;;;;Mirante do Arujá;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-11-18 00:00:00
+99;128;;;;;;F;O-;1987-09-22;;;Guarulhos;Brasileira;;;;;;07400820;;;;Arujá Centro Residencial;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-12-18 00:00:00
+100;128;;;;;;M;A-;2009-08-08;;;Suzano;Brasileira;;;;;;07435605;;;;Arujázinho I, II e III;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-02-19 00:00:00
+101;128;;;;;;F;A-;2018-09-23;;;Ferraz de Vasconcelos;Brasileira;;;;;;07431370;;;;Jardim Cury;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-12-11 00:00:00
+102;128;;;;;;M;O+;2014-12-17;;;Santa Isabel;Brasileira;;;;;;07417380;;;;Parque Rodrigo Barreto;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-11-05 00:00:00
+103;128;;;;;;F;O-;2021-06-02;;;Mogi das Cruzes;Brasileira;;;;;;07400550;;;;Centro;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-02-22 00:00:00
+104;128;;;;;;M;O-;2020-04-13;;;Biritiba Mirim;Brasileira;;;;;;07428115;;;;Jardim Fazenda Rincão;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-11-20 00:00:00
+105;128;;;;;;F;AB-;2020-12-02;;;Guararema;Brasileira;;;;;;07431430;;;;Jardim Cury;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-11-27 00:00:00
+106;128;;;;;;F;O-;2020-03-09;;;Ferraz de Vasconcelos;Brasileira;;;;;;07435590;;;;Arujázinho I, II e III;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-10-03 00:00:00
+107;128;;;;;;F;A+;2011-08-20;;;Arujá;Brasileira;;;;;;07417125;;;;Parque Rodrigo Barreto;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-10-28 00:00:00
+108;128;;;;;;F;O+;2010-09-22;;;Guararema;Brasileira;;;;;;07417110;;;;Parque Rodrigo Barreto;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-11-06 00:00:00
+109;128;;;;;;F;O+;1988-12-16;;;Mogi das Cruzes;Brasileira;;;;;;07403110;;;;Arujamérica;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-01-02 00:00:00
+110;128;;;;;;M;B+;2011-03-03;;;Mogi das Cruzes;Brasileira;;;;;;07400675;;;;Arujá Centro Residencial;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-11-27 00:00:00
+111;128;;;;;;F;A+;2014-11-13;;;Suzano;Brasileira;;;;;;07417530;;;;Parque Rodrigo Barreto;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-01-23 00:00:00
+112;128;;;;;;M;B-;2019-02-17;;;Guararema;Brasileira;;;;;;07435210;;;;Arujá Country Club;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-11-20 00:00:00
+113;128;;;;;;F;O+;2017-10-21;;;Ferraz de Vasconcelos;Brasileira;;;;;;07429325;;;;Residencial Real Park;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-03-02 00:00:00
+114;128;;;;;;M;A+;2020-07-16;;;Ferraz de Vasconcelos;Brasileira;;;;;;07435270;;;;Arujá Country Club;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-12-17 00:00:00
+115;128;;;;;;M;O+;1974-12-14;;;Salesópolis;Brasileira;;;;;;07400030;;;;Centro;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-01-03 00:00:00
+116;128;;;;;;M;O-;2023-11-23;;;Poá;Brasileira;;;;;;07435500;;;;Arujázinho I, II e III;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-02-20 00:00:00
+117;128;;;;;;M;O-;2001-01-22;;;Suzano;Brasileira;;;;;;07435220;;;;Arujá Country Club;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-02-24 00:00:00
+118;128;;;;;;F;A+;2016-04-30;;;Arujá;Brasileira;;;;;;07434495;;;;Arujázinho IV;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-12-07 00:00:00
+119;128;;;;;;M;A-;1985-06-01;;;Itaquaquecetuba;Brasileira;;;;;;07403050;;;;Arujamérica;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-10-03 00:00:00
+120;128;;;;;;F;AB-;2013-09-12;;;Mogi das Cruzes;Brasileira;;;;;;07434460;;;;Arujázinho IV;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-01-03 00:00:00
+121;128;;;;;;M;AB+;2015-11-16;;;Itaquaquecetuba;Brasileira;;;;;;07417245;;;;Parque Rodrigo Barreto;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-12-19 00:00:00
+122;128;;;;;;F;B+;2014-04-18;;;Itaquaquecetuba;Brasileira;;;;;;07435555;;;;Arujázinho I, II e III;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-12-29 00:00:00
+123;128;;;;;;F;A+;2009-07-18;;;Biritiba Mirim;Brasileira;;;;;;07400810;;;;Arujá Centro Residencial;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-10-04 00:00:00
+124;128;;;;;;M;AB+;2004-01-31;;;Itaquaquecetuba;Brasileira;;;;;;07428315;;;;Jardim Fazenda Rincão;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-10-17 00:00:00
+125;128;;;;;;M;O-;2017-10-22;;;Salesópolis;Brasileira;;;;;;07434485;;;;Arujázinho IV;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-01-05 00:00:00
+126;128;;;;;;M;O-;2022-07-01;;;Arujá;Brasileira;;;;;;07400585;;;;Centro;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-12-06 00:00:00
+127;128;;;;;;M;O+;2022-07-15;;;Suzano;Brasileira;;;;;;07428225;;;;Jardim Fazenda Rincão;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-12-10 00:00:00
+128;128;;;;;;M;A+;2015-03-14;;;Ferraz de Vasconcelos;Brasileira;;;;;;07417100;;;;Parque Rodrigo Barreto;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-01-28 00:00:00
+129;128;;;;;;F;A+;2017-01-23;;;Ferraz de Vasconcelos;Brasileira;;;;;;07431415;;;;Jardim Cury;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-11-03 00:00:00
+130;128;;;;;;M;A+;2009-02-26;;;Itaquaquecetuba;Brasileira;;;;;;07435485;;;;Arujázinho I, II e III;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-10-26 00:00:00
+131;128;;;;;;F;AB+;1995-01-27;;;Poá;Brasileira;;;;;;07403120;;;;Arujamérica;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-01-31 00:00:00
+132;128;;;;;;F;AB+;2016-05-11;;;Itaquaquecetuba;Brasileira;;;;;;07400720;;;;Arujá Centro Residencial;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-02-28 00:00:00
+133;128;;;;;;F;A+;2023-03-07;;;Salesópolis;Brasileira;;;;;;07417330;;;;Parque Rodrigo Barreto;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-11-06 00:00:00
+134;128;;;;;;M;A-;1971-02-02;;;Guarulhos;Brasileira;;;;;;07434485;;;;Arujázinho IV;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-11-19 00:00:00
+135;128;;;;;;F;A-;2009-08-21;;;Salesópolis;Brasileira;;;;;;07417320;;;;Parque Rodrigo Barreto;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-02-23 00:00:00
+136;128;;;;;;F;B+;2022-05-19;;;Guararema;Brasileira;;;;;;07428325;;;;Jardim Fazenda Rincão;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-12-02 00:00:00
+137;128;;;;;;M;A+;2015-06-05;;;Poá;Brasileira;;;;;;07428145;;;;Jardim Fazenda Rincão;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-10-15 00:00:00
+138;128;;;;;;F;O-;2021-06-26;;;Itaquaquecetuba;Brasileira;;;;;;07403060;;;;Arujamérica;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-03-02 00:00:00
+139;128;;;;;;F;O-;2011-10-25;;;Santa Isabel;Brasileira;;;;;;07404140;;;;Mirante do Arujá;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-01-07 00:00:00
+140;128;;;;;;F;B+;1982-04-01;;;Santa Isabel;Brasileira;;;;;;07403005;;;;Arujamérica;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-12-07 00:00:00
+141;128;;;;;;M;O-;2015-01-22;;;Suzano;Brasileira;;;;;;07417380;;;;Parque Rodrigo Barreto;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-01-24 00:00:00
+142;128;;;;;;M;A+;1966-06-05;;;Itaquaquecetuba;Brasileira;;;;;;07404160;;;;Mirante do Arujá;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-10-07 00:00:00
+143;128;;;;;;M;A-;2023-10-07;;;Biritiba Mirim;Brasileira;;;;;;07429285;;;;Residencial Real Park;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2025-01-03 00:00:00
+144;128;;;;;;M;A+;2022-01-28;;;Poá;Brasileira;;;;;;07429205;;;;Residencial Real Park;Arujá;SP;QRCODE_ANONIMO;2030-12-31;2024-10-20 00:00:00

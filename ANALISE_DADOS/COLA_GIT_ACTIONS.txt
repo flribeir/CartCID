@@ -1,0 +1,72 @@
+GitHub Actions - Limites de uso, cobrança e administração:
+https://docs.github.com/pt/actions/administering-github-actions/usage-limits-billing-and-administration
+
+GitHub Actions - Sobre a cobrança das GitHub Actions:
+https://docs.github.com/pt/billing/managing-billing-for-your-products/managing-billing-for-github-actions/about-billing-for-github-actions
+
+GitHub - Billing Summary (Acessar com a conta "fannystec"):
+https://github.com/settings/billing/summary
+
+
+---------------------------------------------------------------------------------------------------------------
+Configuração das credenciais para o "appleboy/ssh-action"
+---------------------------------------------------------------------------------------------------------------
+
+> Acessar o repositório pela conta administrador.
+
+> "Settings" -> "Secrets and variables" -> "Actions".
+
+> Clicar em "New repository secret" e adicionar as seguintes variáveis:
+
+SSH_HOST : 52.67.164.39
+SSH_PORT : 2299
+SSH_USER : ftpfannys
+SSH_KEY  : < Conteúdo da chave primária do arquivo "aws-fannys-ubuntu20-padrao.pem" >
+
+
+---------------------------------------------------------------------------------------------------------------
+Configuração do workflow no repositório
+---------------------------------------------------------------------------------------------------------------
+
+> Criar o diretório ".github/workflows" a partir da raíz do repositório.
+
+> Criar os arquivos "deploy-master.yml" e "deploy-producao.yml" dentro do diretório ".github/workflows".
+
+
+---------------------------------------------------------------------------------------------------------------
+Exemplo do arquivo "deploy-master.yml"
+---------------------------------------------------------------------------------------------------------------
+name: "Deploy Produção"
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy Start
+        run: echo "Repositório [${{ github.event.repository.name }}] no branch [master]"
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Passo Obrigatório: Executar o Git Pull no servidor
+      - name: Deploy via SSH - Git Pull
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            # Comando a serem executados no terminal
+            cd [caminho absoluto do meu projeto no servidor]
+            git pull --rebase origin master
+
+      - name: Deploy End
+        run: echo "Efetuado deploy de produção do repositório [${{ github.event.repository.name }}]"
+---------------------------------------------------------------------------------------------------------------

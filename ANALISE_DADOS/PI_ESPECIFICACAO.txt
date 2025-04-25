@@ -1,0 +1,547 @@
+Baseado na seguinte tabela:
+
+CREATE TABLE Carteirinha_tratada (
+                                  ID                   int(11)       NOT NULL,
+                                  CID                  int(11)       NOT NULL,
+                                  Nome                 varchar(150)      NULL,
+                                  CPF                  varchar(15)       NULL,
+                                  RG                   varchar(25)       NULL,
+                                  RG_Orgao_Expeditor   varchar(25)       NULL,
+                                  RG_Data_Expeditor    date              NULL,
+                                  Sexo                 enum('F','M') NOT NULL,
+                                  Tipo_Sanguineo       varchar(3)        NULL,
+                                  Dt_Nascimento        date          NOT NULL,
+                                  Celular              varchar(25)       NULL,
+                                  Email                varchar(100)      NULL,
+                                  Naturalidade         varchar(25)   NOT NULL,
+                                  Nacionalidade        varchar(25)   NOT NULL,
+                                  Nome_Pai             varchar(150)      NULL,
+                                  Nome_Mae             varchar(150)      NULL,
+                                  Nome_Responsavel     varchar(150)      NULL,
+                                  Telefone_Responsavel varchar(25)       NULL,
+                                  Email_Responsavel    varchar(100)      NULL,
+                                  CEP                  varchar(9)    NOT NULL,
+                                  Endereco             varchar(255)      NULL,
+                                  Numero               varchar(5)        NULL,
+                                  Complemento          varchar(75)       NULL,
+                                  Bairro               varchar(100)  NOT NULL,
+                                  Cidade               varchar(75)   NOT NULL,
+                                  UF                   varchar(2)    NOT NULL,
+                                  QRCode               tinytext      NOT NULL,
+                                  Dt_Validade          date NOT      NULL,
+                                  Dt_Inclusao          timestamp     NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB;
+
+Também tenho os seguintes dados de CEP:
+Cep;Bairro;Cidade
+07400015;Centro;Arujá
+07400020;Centro;Arujá
+07400025;Centro;Arujá
+07400030;Centro;Arujá
+07400040;Centro;Arujá
+07400050;Centro;Arujá
+07400370;Jardim Rincão;Arujá
+07400375;Jardim Rincão;Arujá
+07400380;Jardim Rincão;Arujá
+07400385;Jardim Rincão;Arujá
+07400390;Jardim Rincão;Arujá
+07400395;Jardim Rincão;Arujá
+07400400;Jardim Rincão;Arujá
+07400405;Jardim Rincão;Arujá
+07400410;Jardim Rincão;Arujá
+07400420;Jardim Rincão;Arujá
+07400425;Jardim Rincão;Arujá
+07400430;Jardim Rincão;Arujá
+07400440;Jardim Rincão;Arujá
+07400445;Jardim Rincão;Arujá
+07400450;Jardim Rincão;Arujá
+07400455;Jardim Rincão;Arujá
+07400460;Jardim Rincão;Arujá
+07400465;Jardim Rincão;Arujá
+07400470;Jardim Rincão;Arujá
+07400550;Centro;Arujá
+07400555;Centro;Arujá
+07400560;Centro;Arujá
+07400565;Centro;Arujá
+07400570;Centro;Arujá
+07400575;Centro;Arujá
+07400580;Centro;Arujá
+07400585;Centro;Arujá
+07400590;Centro;Arujá
+07400595;Centro;Arujá
+07400600;Centro;Arujá
+07400605;Centro;Arujá
+07400610;Centro;Arujá
+07400615;Centro;Arujá
+07400630;Centro;Arujá
+07400645;Centro;Arujá
+07400650;Centro;Arujá
+07400655;Arujá Centro Residencial;Arujá
+07400660;Arujá Centro Residencial;Arujá
+07400665;Arujá Centro Residencial;Arujá
+07400675;Arujá Centro Residencial;Arujá
+07400680;Arujá Centro Residencial;Arujá
+07400690;Arujá Centro Residencial;Arujá
+07400700;Arujá Centro Residencial;Arujá
+07400705;Arujá Centro Residencial;Arujá
+07400710;Arujá Centro Residencial;Arujá
+07400715;Arujá Centro Residencial;Arujá
+07400720;Arujá Centro Residencial;Arujá
+07400725;Arujá Centro Residencial;Arujá
+07400735;Arujá Centro Residencial;Arujá
+07400745;Arujá Centro Residencial;Arujá
+07400755;Arujá Centro Residencial;Arujá
+07400765;Arujá Centro Residencial;Arujá
+07400770;Arujá Centro Residencial;Arujá
+07400775;Arujá Centro Residencial;Arujá
+07400780;Arujá Centro Residencial;Arujá
+07400785;Arujá Centro Residencial;Arujá
+07400790;Arujá Centro Residencial;Arujá
+07400795;Arujá Centro Residencial;Arujá
+07400800;Arujá Centro Residencial;Arujá
+07400805;Arujá Centro Residencial;Arujá
+07400810;Arujá Centro Residencial;Arujá
+07400815;Arujá Centro Residencial;Arujá
+07400820;Arujá Centro Residencial;Arujá
+07400825;Arujá Centro Residencial;Arujá
+07400830;Arujá Centro Residencial;Arujá
+07400835;Arujá Centro Residencial;Arujá
+07400840;Arujá Centro Residencial;Arujá
+07400845;Arujá Centro Residencial;Arujá
+07400850;Arujá Centro Residencial;Arujá
+07400855;Arujá Centro Residencial;Arujá
+07400860;Arujá Centro Residencial;Arujá
+07400865;Arujá Centro Residencial;Arujá
+07400870;Arujá Centro Residencial;Arujá
+07400875;Arujá Centro Residencial;Arujá
+07400880;Arujá Centro Residencial;Arujá
+07400885;Arujá Centro Residencial;Arujá
+07400959;Jardim Rincão;Arujá
+07400970;Jardim Rincão;Arujá
+07400971;Centro;Arujá
+07400972;Jardim Rincão;Arujá
+07403000;Arujamérica;Arujá
+07403005;Arujamérica;Arujá
+07403010;Arujamérica;Arujá
+07403015;Arujamérica;Arujá
+07403020;Arujamérica;Arujá
+07403025;Arujamérica;Arujá
+07403030;Arujamérica;Arujá
+07403035;Arujamérica;Arujá
+07403040;Arujamérica;Arujá
+07403045;Arujamérica;Arujá
+07403050;Arujamérica;Arujá
+07403055;Arujamérica;Arujá
+07403060;Arujamérica;Arujá
+07403065;Arujamérica;Arujá
+07403070;Arujamérica;Arujá
+07403075;Arujamérica;Arujá
+07403080;Arujamérica;Arujá
+07403085;Arujamérica;Arujá
+07403090;Arujamérica;Arujá
+07403100;Arujamérica;Arujá
+07403105;Arujamérica;Arujá
+07403110;Arujamérica;Arujá
+07403113;Arujamérica;Arujá
+07403115;Arujamérica;Arujá
+07403120;Arujamérica;Arujá
+07404020;Mirante do Arujá;Arujá
+07404025;Mirante do Arujá;Arujá
+07404030;Mirante do Arujá;Arujá
+07404035;Mirante do Arujá;Arujá
+07404040;Mirante do Arujá;Arujá
+07404045;Mirante do Arujá;Arujá
+07404050;Mirante do Arujá;Arujá
+07404055;Mirante do Arujá;Arujá
+07404060;Mirante do Arujá;Arujá
+07404065;Mirante do Arujá;Arujá
+07404070;Mirante do Arujá;Arujá
+07404075;Mirante do Arujá;Arujá
+07404080;Mirante do Arujá;Arujá
+07404085;Mirante do Arujá;Arujá
+07404090;Mirante do Arujá;Arujá
+07404095;Mirante do Arujá;Arujá
+07404100;Mirante do Arujá;Arujá
+07404105;Mirante do Arujá;Arujá
+07404110;Mirante do Arujá;Arujá
+07404115;Mirante do Arujá;Arujá
+07404120;Mirante do Arujá;Arujá
+07404125;Mirante do Arujá;Arujá
+07404130;Mirante do Arujá;Arujá
+07404135;Mirante do Arujá;Arujá
+07404140;Mirante do Arujá;Arujá
+07404145;Mirante do Arujá;Arujá
+07404150;Mirante do Arujá;Arujá
+07404155;Mirante do Arujá;Arujá
+07404160;Mirante do Arujá;Arujá
+07404165;Mirante do Arujá;Arujá
+07404170;Mirante do Arujá;Arujá
+07404175;Mirante do Arujá;Arujá
+07404180;Mirante do Arujá;Arujá
+07404185;Mirante do Arujá;Arujá
+07404190;Mirante do Arujá;Arujá
+07404195;Mirante do Arujá;Arujá
+07404200;Mirante do Arujá;Arujá
+07404205;Mirante do Arujá;Arujá
+07404210;Mirante do Arujá;Arujá
+07404215;Mirante do Arujá;Arujá
+07404290;Mirante do Arujá;Arujá
+07411350;Cidade Nova Arujá;Arujá
+07411355;Cidade Nova Arujá;Arujá
+07411360;Cidade Nova Arujá;Arujá
+07411365;Cidade Nova Arujá;Arujá
+07411370;Cidade Nova Arujá;Arujá
+07411375;Cidade Nova Arujá;Arujá
+07411380;Cidade Nova Arujá;Arujá
+07411385;Cidade Nova Arujá;Arujá
+07411390;Cidade Nova Arujá;Arujá
+07411395;Cidade Nova Arujá;Arujá
+07411400;Cidade Nova Arujá;Arujá
+07411405;Cidade Nova Arujá;Arujá
+07411410;Cidade Nova Arujá;Arujá
+07411415;Cidade Nova Arujá;Arujá
+07411420;Cidade Nova Arujá;Arujá
+07411425;Cidade Nova Arujá;Arujá
+07411430;Cidade Nova Arujá;Arujá
+07411435;Cidade Nova Arujá;Arujá
+07411440;Cidade Nova Arujá;Arujá
+07411445;Cidade Nova Arujá;Arujá
+07417100;Parque Rodrigo Barreto;Arujá
+07417105;Parque Rodrigo Barreto;Arujá
+07417110;Parque Rodrigo Barreto;Arujá
+07417115;Parque Rodrigo Barreto;Arujá
+07417120;Parque Rodrigo Barreto;Arujá
+07417125;Parque Rodrigo Barreto;Arujá
+07417130;Parque Rodrigo Barreto;Arujá
+07417135;Parque Rodrigo Barreto;Arujá
+07417140;Parque Rodrigo Barreto;Arujá
+07417145;Parque Rodrigo Barreto;Arujá
+07417150;Parque Rodrigo Barreto;Arujá
+07417155;Parque Rodrigo Barreto;Arujá
+07417160;Parque Rodrigo Barreto;Arujá
+07417165;Parque Rodrigo Barreto;Arujá
+07417170;Parque Rodrigo Barreto;Arujá
+07417175;Parque Rodrigo Barreto;Arujá
+07417180;Parque Rodrigo Barreto;Arujá
+07417185;Parque Rodrigo Barreto;Arujá
+07417190;Parque Rodrigo Barreto;Arujá
+07417195;Parque Rodrigo Barreto;Arujá
+07417200;Parque Rodrigo Barreto;Arujá
+07417210;Parque Rodrigo Barreto;Arujá
+07417215;Parque Rodrigo Barreto;Arujá
+07417220;Parque Rodrigo Barreto;Arujá
+07417225;Parque Rodrigo Barreto;Arujá
+07417230;Parque Rodrigo Barreto;Arujá
+07417235;Parque Rodrigo Barreto;Arujá
+07417240;Parque Rodrigo Barreto;Arujá
+07417245;Parque Rodrigo Barreto;Arujá
+07417250;Parque Rodrigo Barreto;Arujá
+07417255;Parque Rodrigo Barreto;Arujá
+07417260;Parque Rodrigo Barreto;Arujá
+07417265;Parque Rodrigo Barreto;Arujá
+07417270;Parque Rodrigo Barreto;Arujá
+07417275;Parque Rodrigo Barreto;Arujá
+07417280;Parque Rodrigo Barreto;Arujá
+07417285;Parque Rodrigo Barreto;Arujá
+07417290;Parque Rodrigo Barreto;Arujá
+07417295;Parque Rodrigo Barreto;Arujá
+07417300;Parque Rodrigo Barreto;Arujá
+07417305;Parque Rodrigo Barreto;Arujá
+07417310;Parque Rodrigo Barreto;Arujá
+07417315;Parque Rodrigo Barreto;Arujá
+07417320;Parque Rodrigo Barreto;Arujá
+07417325;Parque Rodrigo Barreto;Arujá
+07417330;Parque Rodrigo Barreto;Arujá
+07417335;Parque Rodrigo Barreto;Arujá
+07417340;Parque Rodrigo Barreto;Arujá
+07417345;Parque Rodrigo Barreto;Arujá
+07417350;Parque Rodrigo Barreto;Arujá
+07417355;Parque Rodrigo Barreto;Arujá
+07417360;Parque Rodrigo Barreto;Arujá
+07417365;Parque Rodrigo Barreto;Arujá
+07417370;Parque Rodrigo Barreto;Arujá
+07417375;Parque Rodrigo Barreto;Arujá
+07417380;Parque Rodrigo Barreto;Arujá
+07417385;Parque Rodrigo Barreto;Arujá
+07417390;Parque Rodrigo Barreto;Arujá
+07417395;Parque Rodrigo Barreto;Arujá
+07417400;Parque Rodrigo Barreto;Arujá
+07417405;Parque Rodrigo Barreto;Arujá
+07417410;Parque Rodrigo Barreto;Arujá
+07417415;Parque Rodrigo Barreto;Arujá
+07417420;Parque Rodrigo Barreto;Arujá
+07417425;Parque Rodrigo Barreto;Arujá
+07417430;Parque Rodrigo Barreto;Arujá
+07417435;Parque Rodrigo Barreto;Arujá
+07417440;Parque Rodrigo Barreto;Arujá
+07417445;Parque Rodrigo Barreto;Arujá
+07417450;Parque Rodrigo Barreto;Arujá
+07417455;Parque Rodrigo Barreto;Arujá
+07417460;Parque Rodrigo Barreto;Arujá
+07417465;Parque Rodrigo Barreto;Arujá
+07417470;Parque Rodrigo Barreto;Arujá
+07417475;Parque Rodrigo Barreto;Arujá
+07417480;Parque Rodrigo Barreto;Arujá
+07417485;Parque Rodrigo Barreto;Arujá
+07417490;Parque Rodrigo Barreto;Arujá
+07417495;Parque Rodrigo Barreto;Arujá
+07417500;Parque Rodrigo Barreto;Arujá
+07417505;Parque Rodrigo Barreto;Arujá
+07417510;Parque Rodrigo Barreto;Arujá
+07417515;Parque Rodrigo Barreto;Arujá
+07417520;Parque Rodrigo Barreto;Arujá
+07417525;Parque Rodrigo Barreto;Arujá
+07417530;Parque Rodrigo Barreto;Arujá
+07417535;Parque Rodrigo Barreto;Arujá
+07417540;Parque Rodrigo Barreto;Arujá
+07417545;Parque Rodrigo Barreto;Arujá
+07417550;Parque Rodrigo Barreto;Arujá
+07417555;Parque Rodrigo Barreto;Arujá
+07417560;Parque Rodrigo Barreto;Arujá
+07417565;Parque Rodrigo Barreto;Arujá
+07417570;Parque Rodrigo Barreto;Arujá
+07417575;Parque Rodrigo Barreto;Arujá
+07417580;Parque Rodrigo Barreto;Arujá
+07417585;Parque Rodrigo Barreto;Arujá
+07417590;Parque Rodrigo Barreto;Arujá
+07417595;Parque Rodrigo Barreto;Arujá
+07417600;Parque Rodrigo Barreto;Arujá
+07417605;Parque Rodrigo Barreto;Arujá
+07428070;Jardim Fazenda Rincão;Arujá
+07428075;Jardim Fazenda Rincão;Arujá
+07428080;Jardim Fazenda Rincão;Arujá
+07428085;Jardim Fazenda Rincão;Arujá
+07428090;Jardim Fazenda Rincão;Arujá
+07428095;Jardim Fazenda Rincão;Arujá
+07428100;Jardim Fazenda Rincão;Arujá
+07428105;Jardim Fazenda Rincão;Arujá
+07428110;Jardim Fazenda Rincão;Arujá
+07428115;Jardim Fazenda Rincão;Arujá
+07428120;Jardim Fazenda Rincão;Arujá
+07428125;Jardim Fazenda Rincão;Arujá
+07428130;Jardim Fazenda Rincão;Arujá
+07428135;Jardim Fazenda Rincão;Arujá
+07428140;Jardim Fazenda Rincão;Arujá
+07428145;Jardim Fazenda Rincão;Arujá
+07428150;Jardim Fazenda Rincão;Arujá
+07428155;Jardim Fazenda Rincão;Arujá
+07428160;Jardim Fazenda Rincão;Arujá
+07428165;Jardim Fazenda Rincão;Arujá
+07428170;Jardim Fazenda Rincão;Arujá
+07428175;Jardim Fazenda Rincão;Arujá
+07428180;Jardim Fazenda Rincão;Arujá
+07428185;Jardim Fazenda Rincão;Arujá
+07428190;Jardim Fazenda Rincão;Arujá
+07428195;Jardim Fazenda Rincão;Arujá
+07428200;Jardim Fazenda Rincão;Arujá
+07428205;Jardim Fazenda Rincão;Arujá
+07428210;Jardim Fazenda Rincão;Arujá
+07428215;Jardim Fazenda Rincão;Arujá
+07428220;Jardim Fazenda Rincão;Arujá
+07428225;Jardim Fazenda Rincão;Arujá
+07428230;Jardim Fazenda Rincão;Arujá
+07428235;Jardim Fazenda Rincão;Arujá
+07428240;Jardim Fazenda Rincão;Arujá
+07428245;Jardim Fazenda Rincão;Arujá
+07428250;Jardim Fazenda Rincão;Arujá
+07428255;Jardim Fazenda Rincão;Arujá
+07428260;Jardim Fazenda Rincão;Arujá
+07428265;Jardim Fazenda Rincão;Arujá
+07428270;Jardim Fazenda Rincão;Arujá
+07428275;Jardim Fazenda Rincão;Arujá
+07428280;Jardim Fazenda Rincão;Arujá
+07428285;Jardim Fazenda Rincão;Arujá
+07428290;Jardim Fazenda Rincão;Arujá
+07428295;Jardim Fazenda Rincão;Arujá
+07428300;Jardim Fazenda Rincão;Arujá
+07428305;Jardim Fazenda Rincão;Arujá
+07428310;Jardim Fazenda Rincão;Arujá
+07428315;Jardim Fazenda Rincão;Arujá
+07428320;Jardim Fazenda Rincão;Arujá
+07428325;Jardim Fazenda Rincão;Arujá
+07428330;Jardim Fazenda Rincão;Arujá
+07429200;Residencial Real Park;Arujá
+07429205;Residencial Real Park;Arujá
+07429210;Residencial Real Park;Arujá
+07429215;Residencial Real Park;Arujá
+07429220;Residencial Real Park;Arujá
+07429225;Residencial Real Park;Arujá
+07429230;Residencial Real Park;Arujá
+07429235;Residencial Real Park;Arujá
+07429240;Residencial Real Park;Arujá
+07429245;Residencial Real Park;Arujá
+07429250;Residencial Real Park;Arujá
+07429255;Residencial Real Park;Arujá
+07429260;Residencial Real Park;Arujá
+07429265;Residencial Real Park;Arujá
+07429270;Residencial Real Park;Arujá
+07429275;Residencial Real Park;Arujá
+07429280;Residencial Real Park;Arujá
+07429285;Residencial Real Park;Arujá
+07429290;Residencial Real Park;Arujá
+07429295;Residencial Real Park;Arujá
+07429300;Residencial Real Park;Arujá
+07429305;Residencial Real Park;Arujá
+07429310;Residencial Real Park;Arujá
+07429315;Residencial Real Park;Arujá
+07429320;Residencial Real Park;Arujá
+07429325;Residencial Real Park;Arujá
+07429330;Residencial Real Park;Arujá
+07431370;Jardim Cury;Arujá
+07431375;Jardim Cury;Arujá
+07431380;Jardim Cury;Arujá
+07431385;Jardim Cury;Arujá
+07431390;Jardim Cury;Arujá
+07431395;Jardim Cury;Arujá
+07431400;Jardim Cury;Arujá
+07431405;Jardim Cury;Arujá
+07431410;Jardim Cury;Arujá
+07431415;Jardim Cury;Arujá
+07431420;Jardim Cury;Arujá
+07431425;Jardim Cury;Arujá
+07431430;Jardim Cury;Arujá
+07431435;Jardim Cury;Arujá
+07431440;Jardim Cury;Arujá
+07431445;Jardim Cury;Arujá
+07431450;Jardim Cury;Arujá
+07434430;Arujázinho IV;Arujá
+07434435;Arujázinho IV;Arujá
+07434440;Arujázinho IV;Arujá
+07434445;Arujázinho IV;Arujá
+07434450;Arujázinho IV;Arujá
+07434455;Arujázinho IV;Arujá
+07434460;Arujázinho IV;Arujá
+07434465;Arujázinho IV;Arujá
+07434470;Arujázinho IV;Arujá
+07434475;Arujázinho IV;Arujá
+07434480;Arujázinho IV;Arujá
+07434485;Arujázinho IV;Arujá
+07434490;Arujázinho IV;Arujá
+07434495;Arujázinho IV;Arujá
+07434500;Arujázinho IV;Arujá
+07434505;Arujázinho IV;Arujá
+07434510;Arujázinho IV;Arujá
+07434515;Arujázinho IV;Arujá
+07434520;Arujázinho IV;Arujá
+07434525;Arujázinho IV;Arujá
+07434530;Arujázinho IV;Arujá
+07434535;Arujázinho IV;Arujá
+07434540;Arujázinho IV;Arujá
+07435180;Arujá Country Club;Arujá
+07435185;Arujá Country Club;Arujá
+07435190;Arujá Country Club;Arujá
+07435195;Arujá Country Club;Arujá
+07435200;Arujá Country Club;Arujá
+07435205;Arujá Country Club;Arujá
+07435210;Arujá Country Club;Arujá
+07435215;Arujá Country Club;Arujá
+07435220;Arujá Country Club;Arujá
+07435225;Arujá Country Club;Arujá
+07435230;Arujá Country Club;Arujá
+07435235;Arujá Country Club;Arujá
+07435240;Arujá Country Club;Arujá
+07435245;Arujá Country Club;Arujá
+07435250;Arujá Country Club;Arujá
+07435255;Arujá Country Club;Arujá
+07435260;Arujá Country Club;Arujá
+07435265;Arujá Country Club;Arujá
+07435270;Arujá Country Club;Arujá
+07435275;Arujá Country Club;Arujá
+07435290;Arujá Country Club;Arujá
+07435295;Arujá Country Club;Arujá
+07435300;Arujá Country Club;Arujá
+07435305;Arujá Country Club;Arujá
+07435310;Arujá Country Club;Arujá
+07435315;Arujá Country Club;Arujá
+07435320;Arujá Country Club;Arujá
+07435440;Arujázinho I, II e III;Arujá
+07435445;Arujázinho I, II e III;Arujá
+07435450;Arujázinho I, II e III;Arujá
+07435455;Arujázinho I, II e III;Arujá
+07435460;Arujázinho I, II e III;Arujá
+07435465;Arujázinho I, II e III;Arujá
+07435470;Arujázinho I, II e III;Arujá
+07435480;Arujázinho I, II e III;Arujá
+07435485;Arujázinho I, II e III;Arujá
+07435500;Arujázinho I, II e III;Arujá
+07435505;Arujázinho I, II e III;Arujá
+07435515;Arujázinho I, II e III;Arujá
+07435520;Arujázinho I, II e III;Arujá
+07435525;Arujázinho I, II e III;Arujá
+07435530;Arujázinho I, II e III;Arujá
+07435535;Arujázinho I, II e III;Arujá
+07435545;Arujázinho I, II e III;Arujá
+07435550;Arujázinho I, II e III;Arujá
+07435555;Arujázinho I, II e III;Arujá
+07435560;Arujázinho I, II e III;Arujá
+07435565;Arujázinho I, II e III;Arujá
+07435570;Arujázinho I, II e III;Arujá
+07435575;Arujázinho I, II e III;Arujá
+07435580;Arujázinho I, II e III;Arujá
+07435585;Arujázinho I, II e III;Arujá
+07435590;Arujázinho I, II e III;Arujá
+07435595;Arujázinho I, II e III;Arujá
+07435600;Arujázinho I, II e III;Arujá
+07435605;Arujázinho I, II e III;Arujá
+07435610;Arujázinho I, II e III;Arujá
+07435615;Arujázinho I, II e III;Arujá
+07435620;Arujázinho I, II e III;Arujá
+07435635;Arujázinho I, II e III;Arujá
+07435640;Arujázinho I, II e III;Arujá
+07435645;Arujázinho I, II e III;Arujá
+07435650;Arujázinho I, II e III;Arujá
+07435655;Arujázinho I, II e III;Arujá
+07435660;Arujázinho I, II e III;Arujá
+07435670;Arujázinho I, II e III;Arujá
+07435675;Arujázinho I, II e III;Arujá
+07435680;Arujázinho I, II e III;Arujá
+07435685;Arujázinho I, II e III;Arujá
+07435695;Arujázinho I, II e III;Arujá
+07435700;Arujázinho I, II e III;Arujá
+07435705;Arujázinho I, II e III;Arujá
+07435715;Arujázinho I, II e III;Arujá
+07435720;Arujázinho I, II e III;Arujá
+07435725;Arujázinho I, II e III;Arujá
+07439000;Chácaras Copaco;Arujá
+07439005;Chácaras Copaco;Arujá
+07439010;Chácaras Copaco;Arujá
+07439015;Chácaras Copaco;Arujá
+07439020;Chácaras Copaco;Arujá
+07439025;Chácaras Copaco;Arujá
+07439030;Chácaras Copaco;Arujá
+07439035;Chácaras Copaco;Arujá
+07439040;Chácaras Copaco;Arujá
+07439045;Chácaras Copaco;Arujá
+07439050;Chácaras Copaco;Arujá
+07439055;Chácaras Copaco;Arujá
+07439060;Chácaras Copaco;Arujá
+07439065;Chácaras Copaco;Arujá
+07439070;Chácaras Copaco;Arujá
+07439080;Chácaras Copaco;Arujá
+07439090;Chácaras Copaco;Arujá
+07439100;Chácaras Copaco;Arujá
+07439110;Chácaras Copaco;Arujá
+07439120;Chácaras Copaco;Arujá
+07439125;Chácaras Copaco;Arujá
+07439130;Chácaras Copaco;Arujá
+07439135;Chácaras Copaco;Arujá
+
+Preciso de um insert para MySQl conforme as especificações abaixo e um arquivo csc separado por ;
+- Precisa ter 144 registros;
+- O CID será 128;
+- Os campos Nome, CPF, RG, RG_Orgao_Expeditor, RG_Data_Expeditor, Celular, Email, Nome_Pai, Nome_mae, Nome_Responsavel, Telefone_Responsavel, Email_Responsavel, Endereco, Numero, Complemento devem ser nulos dois devem simular dados anonimos;
+- Os bairros devem ser os informados anteriormente e a distribuição NÃO poder ser igual entre os bairros;
+- Os CEPs dos bairros quer você gerar deve ser baseados na informação de CEPs passada anteriormente;
+- A cidade deve ser Arujá;
+- A UF deve ser SP;
+- as cidade de nascimento devem ser Arujá", Biritiba Mirim, Ferraz de Vasconcelos, Guararema, Guarulhos, Itaquaquecetuba, Mogi das Cruzes, Poá, Salesópolis, Santa Isabel, Suzano
+- Adata de inclusão deve ser entre 01/10/2024 e 05/03/202,
+- A faixa etária deve seguir a seguinte distribuição:
+  - "00 a 05" = 45;
+  - "06 a 12" = 62;
+  - "13 a 18" = 16;
+  - "19 a 59" = 21;  # Total de 144 registros
+- 48% dos registros devem ser do sexo masculino;
+- A nacionalidade deve ser brasileira;
+- A Naturalidade pode ser qualquer cidade do Brasil;
+-

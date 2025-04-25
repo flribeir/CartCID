@@ -1,0 +1,145 @@
+ID;Sexo;Idade;CEP;Bairro;Cidade;UF
+ID_1;Masculino;43;7417280;Parque Rodrigo Barreto;Arujá;SP
+ID_2;Masculino;10;7417195;Parque Rodrigo Barreto;Arujá;SP
+ID_3;Feminino;8;7431410;Jardim Cury;Arujá;SP
+ID_4;Masculino;11;7434455;Arujázinho IV;Arujá;SP
+ID_5;Feminino;4;7417490;Parque Rodrigo Barreto;Arujá;SP
+ID_6;Feminino;9;7428240;Jardim Fazenda Rincão;Arujá;SP
+ID_7;Feminino;6;7429250;Residencial Real Park;Arujá;SP
+ID_8;Feminino;4;7428330;Jardim Fazenda Rincão;Arujá;SP
+ID_9;Feminino;7;7404180;Mirante do Arujá;Arujá;SP
+ID_10;Masculino;8;7404065;Mirante do Arujá;Arujá;SP
+ID_11;Masculino;12;7404155;Mirante do Arujá;Arujá;SP
+ID_12;Feminino;8;7404160;Mirante do Arujá;Arujá;SP
+ID_13;Feminino;1;7435270;Arujá Country Club;Arujá;SP
+ID_14;Masculino;3;7435675;Arujázinho I, II e III;Arujá;SP
+ID_15;Masculino;15;7435635;Arujázinho I, II e III;Arujá;SP
+ID_16;Masculino;50;7400870;Arujá Centro Residencial;Arujá;SP
+ID_17;Feminino;0;7400445;Jardim Rincão;Arujá;SP
+ID_18;Feminino;21;7434480;Arujázinho IV;Arujá;SP
+ID_19;Masculino;6;7417315;Parque Rodrigo Barreto;Arujá;SP
+ID_20;Masculino;7;7429310;Residencial Real Park;Arujá;SP
+ID_21;Feminino;17;7400420;Jardim Rincão;Arujá;SP
+ID_22;Feminino;8;7435255;Arujá Country Club;Arujá;SP
+ID_23;Feminino;13;7428325;Jardim Fazenda Rincão;Arujá;SP
+ID_24;Feminino;4;7400865;Arujá Centro Residencial;Arujá;SP
+ID_25;Feminino;3;7429230;Residencial Real Park;Arujá;SP
+ID_26;Feminino;35;7435635;Arujázinho I, II e III;Arujá;SP
+ID_27;Feminino;2;7404155;Mirante do Arujá;Arujá;SP
+ID_28;Feminino;7;7417255;Parque Rodrigo Barreto;Arujá;SP
+ID_29;Feminino;16;7400465;Jardim Rincão;Arujá;SP
+ID_30;Feminino;53;7417505;Parque Rodrigo Barreto;Arujá;SP
+ID_31;Masculino;4;7431425;Jardim Cury;Arujá;SP
+ID_32;Feminino;0;7428080;Jardim Fazenda Rincão;Arujá;SP
+ID_33;Feminino;9;7439045;Chácaras Copaco;Arujá;SP
+ID_34;Masculino;11;7417320;Parque Rodrigo Barreto;Arujá;SP
+ID_35;Masculino;12;7435200;Arujá Country Club;Arujá;SP
+ID_36;Masculino;7;7400370;Jardim Rincão;Arujá;SP
+ID_37;Feminino;6;7417220;Parque Rodrigo Barreto;Arujá;SP
+ID_38;Feminino;54;7439010;Chácaras Copaco;Arujá;SP
+ID_39;Feminino;50;7400785;Arujá Centro Residencial;Arujá;SP
+ID_40;Feminino;8;7435585;Arujázinho I, II e III;Arujá;SP
+ID_41;Feminino;3;7417185;Parque Rodrigo Barreto;Arujá;SP
+ID_42;Feminino;11;7400805;Arujá Centro Residencial;Arujá;SP
+ID_43;Masculino;6;7400015;Centro;Arujá;SP
+ID_44;Feminino;11;7435555;Arujázinho I, II e III;Arujá;SP
+ID_45;Masculino;8;7428220;Jardim Fazenda Rincão;Arujá;SP
+ID_46;Feminino;5;7417110;Parque Rodrigo Barreto;Arujá;SP
+ID_47;Masculino;9;7404030;Mirante do Arujá;Arujá;SP
+ID_48;Masculino;13;7400455;Jardim Rincão;Arujá;SP
+ID_49;Masculino;5;7429270;Residencial Real Park;Arujá;SP
+ID_50;Masculino;2;7435685;Arujázinho I, II e III;Arujá;SP
+ID_51;Masculino;1;7429275;Residencial Real Park;Arujá;SP
+ID_52;Masculino;6;7400595;Centro;Arujá;SP
+ID_53;Feminino;35;7435590;Arujázinho I, II e III;Arujá;SP
+ID_54;Feminino;4;7404115;Mirante do Arujá;Arujá;SP
+ID_55;Masculino;7;7429230;Residencial Real Park;Arujá;SP
+ID_56;Masculino;3;7404210;Mirante do Arujá;Arujá;SP
+ID_57;Feminino;41;7439050;Chácaras Copaco;Arujá;SP
+ID_58;Masculino;7;7404075;Mirante do Arujá;Arujá;SP
+ID_59;Feminino;7;7439000;Chácaras Copaco;Arujá;SP
+ID_60;Feminino;1;7428290;Jardim Fazenda Rincão;Arujá;SP
+ID_61;Masculino;11;7404105;Mirante do Arujá;Arujá;SP
+ID_62;Feminino;24;7400971;Centro;Arujá;SP
+ID_63;Masculino;10;7400450;Jardim Rincão;Arujá;SP
+ID_64;Feminino;11;7404290;Mirante do Arujá;Arujá;SP
+ID_65;Masculino;2;7404290;Mirante do Arujá;Arujá;SP
+ID_66;Feminino;9;7417285;Parque Rodrigo Barreto;Arujá;SP
+ID_67;Feminino;3;7400565;Centro;Arujá;SP
+ID_68;Feminino;3;7400665;Arujá Centro Residencial;Arujá;SP
+ID_69;Masculino;6;7400745;Arujá Centro Residencial;Arujá;SP
+ID_70;Feminino;17;7400880;Arujá Centro Residencial;Arujá;SP
+ID_71;Masculino;4;7403110;Arujamérica;Arujá;SP
+ID_72;Masculino;17;7417260;Parque Rodrigo Barreto;Arujá;SP
+ID_73;Feminino;6;7435250;Arujá Country Club;Arujá;SP
+ID_74;Feminino;8;7403030;Arujamérica;Arujá;SP
+ID_75;Feminino;11;7404115;Mirante do Arujá;Arujá;SP
+ID_76;Masculino;9;7428230;Jardim Fazenda Rincão;Arujá;SP
+ID_77;Masculino;11;7417490;Parque Rodrigo Barreto;Arujá;SP
+ID_78;Masculino;7;7400030;Centro;Arujá;SP
+ID_79;Masculino;7;7435210;Arujá Country Club;Arujá;SP
+ID_80;Masculino;12;7435470;Arujázinho I, II e III;Arujá;SP
+ID_81;Masculino;10;7428305;Jardim Fazenda Rincão;Arujá;SP
+ID_82;Masculino;11;7429200;Residencial Real Park;Arujá;SP
+ID_83;Feminino;9;7417595;Parque Rodrigo Barreto;Arujá;SP
+ID_84;Masculino;56;7417535;Parque Rodrigo Barreto;Arujá;SP
+ID_85;Masculino;4;7435240;Arujá Country Club;Arujá;SP
+ID_86;Feminino;1;7439050;Chácaras Copaco;Arujá;SP
+ID_87;Masculino;2;7417185;Parque Rodrigo Barreto;Arujá;SP
+ID_88;Feminino;3;7431390;Jardim Cury;Arujá;SP
+ID_89;Masculino;13;7435305;Arujá Country Club;Arujá;SP
+ID_90;Feminino;7;7431400;Jardim Cury;Arujá;SP
+ID_91;Feminino;2;7400715;Arujá Centro Residencial;Arujá;SP
+ID_92;Feminino;4;7435225;Arujá Country Club;Arujá;SP
+ID_93;Feminino;9;7417475;Parque Rodrigo Barreto;Arujá;SP
+ID_94;Masculino;2;7428170;Jardim Fazenda Rincão;Arujá;SP
+ID_95;Masculino;1;7417390;Parque Rodrigo Barreto;Arujá;SP
+ID_96;Masculino;2;7417245;Parque Rodrigo Barreto;Arujá;SP
+ID_97;Feminino;8;7435485;Arujázinho I, II e III;Arujá;SP
+ID_98;Masculino;3;7404070;Mirante do Arujá;Arujá;SP
+ID_99;Feminino;37;7400820;Arujá Centro Residencial;Arujá;SP
+ID_100;Masculino;15;7435605;Arujázinho I, II e III;Arujá;SP
+ID_101;Feminino;6;7431370;Jardim Cury;Arujá;SP
+ID_102;Masculino;10;7417380;Parque Rodrigo Barreto;Arujá;SP
+ID_103;Feminino;3;7400550;Centro;Arujá;SP
+ID_104;Masculino;5;7428115;Jardim Fazenda Rincão;Arujá;SP
+ID_105;Feminino;4;7431430;Jardim Cury;Arujá;SP
+ID_106;Feminino;5;7435590;Arujázinho I, II e III;Arujá;SP
+ID_107;Feminino;13;7417125;Parque Rodrigo Barreto;Arujá;SP
+ID_108;Feminino;14;7417110;Parque Rodrigo Barreto;Arujá;SP
+ID_109;Feminino;36;7403110;Arujamérica;Arujá;SP
+ID_110;Masculino;14;7400675;Arujá Centro Residencial;Arujá;SP
+ID_111;Feminino;10;7417530;Parque Rodrigo Barreto;Arujá;SP
+ID_112;Masculino;6;7435210;Arujá Country Club;Arujá;SP
+ID_113;Feminino;7;7429325;Residencial Real Park;Arujá;SP
+ID_114;Masculino;4;7435270;Arujá Country Club;Arujá;SP
+ID_115;Masculino;50;7400030;Centro;Arujá;SP
+ID_116;Masculino;1;7435500;Arujázinho I, II e III;Arujá;SP
+ID_117;Masculino;24;7435220;Arujá Country Club;Arujá;SP
+ID_118;Feminino;8;7434495;Arujázinho IV;Arujá;SP
+ID_119;Masculino;39;7403050;Arujamérica;Arujá;SP
+ID_120;Feminino;11;7434460;Arujázinho IV;Arujá;SP
+ID_121;Masculino;9;7417245;Parque Rodrigo Barreto;Arujá;SP
+ID_122;Feminino;11;7435555;Arujázinho I, II e III;Arujá;SP
+ID_123;Feminino;15;7400810;Arujá Centro Residencial;Arujá;SP
+ID_124;Masculino;21;7428315;Jardim Fazenda Rincão;Arujá;SP
+ID_125;Masculino;7;7434485;Arujázinho IV;Arujá;SP
+ID_126;Masculino;2;7400585;Centro;Arujá;SP
+ID_127;Masculino;2;7428225;Jardim Fazenda Rincão;Arujá;SP
+ID_128;Masculino;10;7417100;Parque Rodrigo Barreto;Arujá;SP
+ID_129;Feminino;8;7431415;Jardim Cury;Arujá;SP
+ID_130;Masculino;16;7435485;Arujázinho I, II e III;Arujá;SP
+ID_131;Feminino;30;7403120;Arujamérica;Arujá;SP
+ID_132;Feminino;8;7400720;Arujá Centro Residencial;Arujá;SP
+ID_133;Feminino;2;7417330;Parque Rodrigo Barreto;Arujá;SP
+ID_134;Masculino;54;7434485;Arujázinho IV;Arujá;SP
+ID_135;Feminino;15;7417320;Parque Rodrigo Barreto;Arujá;SP
+ID_136;Feminino;2;7428325;Jardim Fazenda Rincão;Arujá;SP
+ID_137;Masculino;9;7428145;Jardim Fazenda Rincão;Arujá;SP
+ID_138;Feminino;3;7403060;Arujamérica;Arujá;SP
+ID_139;Feminino;13;7404140;Mirante do Arujá;Arujá;SP
+ID_140;Feminino;43;7403005;Arujamérica;Arujá;SP
+ID_141;Masculino;10;7417380;Parque Rodrigo Barreto;Arujá;SP
+ID_142;Masculino;58;7404160;Mirante do Arujá;Arujá;SP
+ID_143;Masculino;1;7429285;Residencial Real Park;Arujá;SP
+ID_144;Masculino;3;7429205;Residencial Real Park;Arujá;SP
